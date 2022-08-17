@@ -20,7 +20,7 @@ grace à la librairie D3JS dans le dossier lib.
 -------------------------------------------------------------------------------
 
 Pour voir le contenu du projet :
-Ouvrir le fichier index dans Visual Studio Code
+Ouvrir le fichier index.html dans Visual Studio Code
 Installer l'extension Live Server
 Appuyer sur Go Live
 Le projet s'ouvrira alors dans le navigateur internet

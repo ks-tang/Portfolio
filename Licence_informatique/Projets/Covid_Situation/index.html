@@ -21,6 +21,7 @@
             }
             
             p{text-align: center;
+                font-size: medium;
             }
 
             form{text-align:center;}
@@ -265,11 +266,16 @@
                         //Gestion du pays cliqué
                         var clicked_country = d3.select(this)._groups[0][0].__data__.properties.ADMIN;
                         tmp_selection_pays = clicked_country;
+
                         d3.select("#pays")
                             .text(tmp_selection_pays)
                             .style("text-align", "center")
                             .style("font-size", "25px")
                         ;
+
+                        var index_clicked_country = indexCountry(data, clicked_country);
+                        d3.select("#pays").append("p")
+                        .text(data[index_clicked_country].continent)
 
                         //Appel de la fonction de construction du graph
                         construire_graph(tmp_selection_pays, tmp_selection_graph);
@@ -330,20 +336,50 @@
                 var height_country = 500 - margin.top - margin.bottom;
 
                 //Creation du svg
-                var svg_country = d3.select("#graph").append("svg")
-                    .attr("width", width_country + margin.left + margin.right)
+                var svg_graph = d3.select("#graph").append("svg")
+                var svg_country = svg_graph.attr("width", width_country + margin.left + margin.right)
                     .attr("height", height_country + margin.top + margin.bottom)
                     .append("g")
-                    .attr("transform",
-                        "translate(" + margin.left + "," + margin.top + ")");
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
                 ;
+
+                //Affichage d'une ligne horizontale et verticale de la position de la souris
+                svg_graph.on("mouseover", function(){
+                    var mousePosition = d3.pointer(event);
+                    var mouseX = mousePosition[0];
+                    var mouseY = mousePosition[1];
+
+                    d3.select("#line_h").remove();
+                    d3.select("#line_v").remove();
+
+                    svg_graph.append("line")
+                        .attr("id", "line_h")
+                        .attr("stroke", "black")
+                        .attr("x1", mouseX - 1000)
+                        .attr("y1", mouseY)
+                        .attr("x2", mouseX + 1000)
+                        .attr("y2", mouseY)
+                        .attr("stroke-width", 1)
+                    ;
+                    svg_graph.append("line")
+                        .attr("id", "line_v")
+                        .attr("stroke", "black")
+                        .attr("x1", mouseX)
+                        .attr("y1", mouseY - 1000)
+                        .attr("x2", mouseX)
+                        .attr("y2", mouseY + 1000)
+                        .attr("stroke-width", 1)
+                    ;
+                })
 
                 //Utilisation des donnees
                 d3.csv("data/worldometer_coronavirus_daily_data.csv", function(d){
 
                     //Filtre les donnees selon le choix utilisateur
-                    var choix_affichage_graph = choix;
-                    return { date : d3.timeParse("%Y-%m-%d")(d.date), value : choix_option_graph_data(d, choix_affichage_graph), country: d.country};
+                    return { date : d3.timeParse("%Y-%m-%d")(d.date),
+                            value : choix_option_graph_data(d, choix),
+                            country: d.country
+                        };
 
                 }).then(
 
