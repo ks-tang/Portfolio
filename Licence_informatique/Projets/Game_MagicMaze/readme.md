@@ -166,8 +166,6 @@ position donnée en utilisant le moins de coups possibles.
 
 ### Génération de tuiles
 
-[//]: # "{{{"
-
 Pour pouvoir travailler sur le jeu, vous programmerez d'abord un générateur de
 tuiles. Ce générateur permettra de générer des tuiles au hasard et vérifier que
 vos algorithmes fonctionnent correctement.
