@@ -23,7 +23,6 @@
 <a name="introduction"></a>
 ## Introduction
 
-[//]: # "{{{"
 
 ### Objectif
 
@@ -66,11 +65,9 @@ devront être **clairement indiqués en commentaires comme repris**, avec le lie
 vers les pages sur lesquelles le code a été trouvé, et la licence du code
 lorsqu'elle est fournie.
 
-[//]: # "}}}"
 
 ## Présentation du jeu
 
-[//]: # "{{{"
 
 ### Principe du jeu
 
@@ -155,11 +152,8 @@ les chemins les plus courts possibles (en terme de nombre de coups à réaliser)
 pour amener les aventurières aux portes de leur couleur et découvrir le
 supermarché, puis pour les emmener à leurs objectifs ou leurs sorties.
 
-[//]: # "}}}"
-
 ## Votre travail
 
-[//]: # "{{{"
 
 Votre travail consiste à élaborer un robot automatique pour jouer au jeu Magic
 Maze. Le robot devra être en mesure de décider pour chaque aventurière, étant
@@ -476,7 +470,6 @@ afficher sous la forme d'un fichier json :
 Pour tester vos plus courts chemins, des ensembles de tuiles pourront vous être
 fournis sous ce format.
 
-[//]: # "}}}"
 
 ### Plus court chemin dans une tuile
 
