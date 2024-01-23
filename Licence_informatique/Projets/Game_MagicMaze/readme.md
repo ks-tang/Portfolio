@@ -591,5 +591,3 @@ problème ?
 Normalement le jeu doit être réalisé en un temps limité. Des sites
 supplémentaires "sablier" sont présents sur les tuiles pour permettre de
 retourner le sablier. Pensez-vous pouvoir le gérer ?
-
-[//]: # "}}}"
