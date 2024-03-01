@@ -1,0 +1,365 @@
+Question,Label
+"Where is the restaurant located?",Location
+"Can you tell me where the restaurant is?",Location
+"I'm curious, where exactly is the restaurant?",Location
+"Where can I find the restaurant?",Location
+"Could you provide me with the location of the restaurant?",Location
+"I'm wondering, where is the restaurant situated?",Location
+"Can you give me directions to the restaurant?",Location
+"What's the address of the restaurant?",Location
+"Do you know where the restaurant is located?",Location
+"Could you point me in the direction of the restaurant, please?",Location
+"Whereabouts is the restaurant located?",Location
+"Can you provide me with the location details for the restaurant?",Location
+"I'd like to know where the restaurant is.",Location
+"Can you tell me the location of the restaurant?",Location
+"Whereabouts can I find the restaurant?",Location
+"Where is the restaurant situated?",Location
+"Could you give me directions to the restaurant, please?",Location
+"What's the exact address of the restaurant?",Location
+"Do you have any idea where the restaurant is?",Location
+"Can you tell me where the restaurant is situated?",Location
+"Where can I find the restaurant?",Location
+"What's the location of the restaurant?",Location
+"Could you tell me where the restaurant is situated?",Location
+"Where exactly is the restaurant?",Location
+"Can you provide directions to the restaurant?",Location
+"What's the address of the restaurant?",Location
+"Do you know the whereabouts of the restaurant?",Location
+"Whereabouts is the restaurant located?",Location
+"Could you point me in the direction of the restaurant?",Location
+"Can you give me the location details for the restaurant?",Location
+
+"What are the opening hours of the restaurant?",Opening_Hours
+"Can you tell me when the restaurant opens?",Opening_Hours
+"I'm curious, what time does the restaurant open?",Opening_Hours
+"When does the restaurant start serving?",Opening_Hours
+"Could you provide me with the opening hours of the restaurant?",Opening_Hours
+"I'm wondering, what time does the restaurant begin serving?",Opening_Hours
+"Can you tell me the opening hours of the restaurant?",Opening_Hours
+"What time does the restaurant close?",Opening_Hours
+"Do you know when the restaurant opens?",Opening_Hours
+"Could you tell me the opening hours of the restaurant?",Opening_Hours
+"When does the restaurant start operating?",Opening_Hours
+"Can you provide me with the hours the restaurant is open?",Opening_Hours
+"I'd like to know what time the restaurant closes.",Opening_Hours
+"Can you tell me when the restaurant starts serving?",Opening_Hours
+"What time does the restaurant begin operating?",Opening_Hours
+"When does the restaurant close?",Opening_Hours
+"Could you give me the opening hours of the restaurant?",Opening_Hours
+"What time does the restaurant start serving?",Opening_Hours
+"Do you know when the restaurant is open?",Opening_Hours
+"Can you tell me the hours the restaurant is open?",Opening_Hours
+"What are the opening hours of the restaurant?",Opening_Hours
+"When does the restaurant start serving?",Opening_Hours
+"What time does the restaurant close?",Opening_Hours
+"When does the restaurant open?",Opening_Hours
+
+"What's on the restaurant's menu?",Menu
+"Can you list the available dishes?",Menu
+"Could you provide me with the menu options?",Menu
+"What dishes does the restaurant serve?",Menu
+"Can you tell me what's on the menu?",Menu
+"What are the menu items?",Menu
+"Could you tell me what's listed on the menu?",Menu
+"Could you provide me with the restaurant's menu?",Menu
+"What's on today's menu?",Menu
+"What's listed on the menu for today?",Menu
+"What dishes are available?",Menu
+"Can you list the offerings on the menu?",Menu
+"What kind of food does the restaurant offer?",Menu
+"What dishes can I find on the menu?",Menu
+"Could you give me a rundown of the menu options?",Menu
+"What are the menu offerings?",Menu
+"What dishes are available today?",Menu
+"What's on the menu for today?",Menu
+
+
+"Can I pre-pay for my meal online?",Payment
+"Do you accept international credit cards?",Payment
+"Can I pay with my phone using Apple Pay?",Payment
+"Is it possible to split the bill?",Payment
+"Do you take restaurant vouchers?",Payment
+"Are gratuities included in the bill?",Payment
+"Do you offer installment payment options?",Payment
+"Can I pay with multiple forms of payment?",Payment
+"Do you accept mobile wallets like Google Pay or Samsung Pay?",Payment
+"Is there a fee for using credit cards?",Payment
+"Can I pre-pay for my meal online?",Payment
+"Do you offer contactless payment options?",Payment
+"Can I use PayPal to pay for my Add?",Payment
+"Are there any additional charges for using credit cards?",Payment
+"Do you accept payment in foreign currencies?",Payment
+"Is there a minimum spend requirement for credit card payments?",Payment
+"Do you offer payment plans for large Adds?",Payment
+"Can I pay with cryptocurrency?",Payment
+"Do you have a loyalty program for frequent customers?",Payment
+"Are there discounts for using specific payment methods?",Payment
+
+"Dishes containing shellfish on your menu?",Allergens
+"Detailed allergen information provided?",Allergens
+"Special precautions for customers with peanut allergies?",Allergens
+"Bread options free from dairy products?",Allergens
+"Variety of dishes suitable for gluten-free diets?",Allergens
+"Separate kitchen area for allergen-free meals?",Allergens
+"Allergen warnings clearly visible on menu?",Allergens
+"Accommodation of dietary restrictions beyond allergens?",Allergens
+"Discussion of food allergies with the chef possible?",Allergens
+"Undisclosed allergens in dishes?",Allergens
+"Safe menu items for tree nut allergy sufferers?",Allergens
+"Desserts containing nuts or traces of nuts?",Allergens
+"Separation of vegetarian and meat dishes during preparation?",Allergens
+"Review of ingredients used in dishes?",Allergens
+"Dairy-free dessert options available?",Allergens
+"Dishes containing soy ingredients?",Allergens
+"Use of separate fryers for cooking shellfish?",Allergens
+"Accommodation for customers with garlic allergies?",Allergens
+"Menu items containing sesame seeds?",Allergens
+"Selection of vegan options available?",Allergens
+
+
+"What areas do you deliver to?",Delivery
+"Is there a minimum Add amount for delivery?",Delivery
+"How long does delivery usually take?",Delivery
+"Do you offer contactless delivery?",Delivery
+"Are delivery fees waived on large Adds?",Delivery
+"Do you have a delivery tracking system?",Delivery
+"Can I schedule a delivery in advance?",Delivery
+"Can I request specific delivery instructions?",Delivery
+"Is there a delivery fee for Adds under a certain amount?",Delivery
+"Do you deliver to hotels or office buildings?",Delivery
+"Do you offer express delivery options?",Delivery
+"Can I track my delivery in real-time?",Delivery
+"Are there any delivery restrictions in certain areas?",Delivery
+"Can I specify a delivery time window?",Delivery
+"Do you provide delivery confirmation notifications?",Delivery
+"Can I change my delivery address after placing an Add?",Delivery
+"Do you offer free delivery for Adds over a certain amount?",Delivery
+"Are there delivery discounts for frequent customers?",Delivery
+"Do you have special packaging for delivery Adds?",Delivery
+"Can I request contact-free delivery for safety?",Delivery
+
+"I'd like to make a reservation for a party of four this Saturday.",Reservation
+"How can I modify an existing reservation?",Reservation
+"Are there any private rooms available for reservation?",Reservation
+"Do I need to make a reservation for brunch?",Reservation
+"How far in advance should I book a table?",Reservation
+"Can I cancel my reservation online?",Reservation
+"Is there a time limit for holding a reservation?",Reservation
+"Do you require a deposit for large party reservations?",Reservation
+"Can I book a table for outdoor dining?",Reservation
+"Are reservations recommended for your restaurant on weekends?",Reservation
+"Do you accept walk-in reservations?",Reservation
+"Can I make a reservation for a special event?",Reservation
+"Can I reserve a table for a romantic dinner?",Reservation
+"Do you offer reservations for private dining experiences?",Reservation
+"Can I request a specific table location when making a reservation?",Reservation
+"Is there a fee for making reservations online?",Reservation
+"Can I reserve a table for a large group celebration?",Reservation
+"Are reservations mandatory for your restaurant?",Reservation
+"Do you offer reservations for special occasions like birthdays?",Reservation
+"Can I make a reservation for a tasting menu experience?",Reservation
+
+"Hello",Greetings
+"Hi",Greetings
+"Hey",Greetings
+"Hi there",Greetings
+"Hey there",Greetings
+"Hello!",Greetings
+"Hi!",Greetings
+"Hey!",Greetings
+"Hello there",Greetings
+"Good morning",Greetings
+"Good afternoon",Greetings
+"Good evening",Greetings
+"Howdy",Greetings
+"Greetings",Greetings
+"What's up?",Greetings
+"Hiya",Greetings
+"Heya",Greetings
+"How’s it going?",Greetings
+"How are you?",Greetings
+"Hey, what’s up?",Greetings
+
+"Does the restaurant serve alcoholic beverages?",Alcool
+"Can I see the wine list?",Alcool
+"What types of beer do you have available?",Alcool
+"Do you offer a selection of cocktails?",Alcool
+"Is there a bar where I can Add drinks?",Alcool
+"Can I Add a glass of wine with my meal?",Alcool
+"Do you have any specialty cocktails?",Alcool
+"Are there any non-alcoholic drink options?",Alcool
+"Can I get a beer on tap?",Alcool
+"Do you serve spirits like vodka or whiskey?",Alcool
+"Is there a corkage fee if I bring my own wine?",Alcool
+"Do you offer wine pairings with meals?",Alcool
+"Are there any happy hour specials on drinks?",Alcool
+"Can I Add a bottle of champagne for a celebration?",Alcool
+"Do you have any local craft beers?",Alcool
+"Do you offer wine by the glass or by the bottle?",Alcool
+"Are there any signature cocktails?",Alcool
+"Do you have a selection of imported beers?",Alcool
+"Can I Add a non-alcoholic cocktail?",Alcool
+"Are there any drink specials for the evening?",Alcool
+
+"Do you offer halal options on your menu?",Halal
+"Are your dishes prepared according to halal standards?",Halal
+"Can I get a list of halal-certified dishes?",Halal
+"Do you have a dedicated kitchen area for halal food preparation?",Halal
+"Are all ingredients used in your dishes halal-certified?",Halal
+"Do you provide halal-certified desserts?",Halal
+"Do you use separate cookware for halal dishes?",Halal
+"Are beverages served halal-certified?",Halal
+"Do you offer halal-certified snacks?",Halal
+"Is there a prominent display of halal certification?",Halal
+"Can special requests be made for halal meals?",Halal
+"Do you offer halal options suitable for children?",Halal
+"Are halal meals clearly labeled on the menu?",Halal
+"Are meat dishes prepared in accordance with halal guidelines?",Halal
+"Can you confirm adherence to halal standards?",Halal
+"Are there any pork products in your dishes?",Halal
+"Is there a separate preparation area for halal meals?",Halal
+"Can I speak to someone knowledgeable about halal options?",Halal
+"Do you offer halal alternatives for non-halal dishes?",Halal
+"Are there any nearby halal-friendly restaurants?",Halal
+
+
+"Vegetarian options?",Vegetarien
+"Suitable for vegetarians?",Vegetarien
+"Recommend vegetarian meals?",Vegetarien
+"Dedicated vegetarian menu?",Vegetarien
+"Vegetarian dishes prepared separately?",Vegetarien
+"List of vegetarian-friendly dishes?",Vegetarien
+"Vegan choices available?",Vegetarien
+"Any vegan dishes on the menu?",Vegetarien
+"Customization for vegetarian preferences?",Vegetarien
+"Vegetarian dishes without animal fats?",Vegetarien
+"Variety of veggie options?",Vegetarien
+"Soups made with vegetable broth?",Vegetarien
+"Vegetarian appetizers offered?",Vegetarien
+"Non-meat alternatives available?",Vegetarien
+"Clear identification of vegetarian section on menu?",Vegetarien
+"Accommodations for vegetarian dietary needs?",Vegetarien
+"Vegetarian desserts offered?",Vegetarien
+"Tofu or meat substitutes available?",Vegetarien
+"Special vegetarian dishes today?",Vegetarien
+"Kid-friendly vegetarian options?",Vegetarien
+
+
+
+"Is your restaurant known for its gastronomic cuisine?",Gastronomic
+"Do you specialize in gastronomic dining experiences?",Gastronomic
+"Can I expect gastronomic delights on your menu?",Gastronomic
+"Are your dishes prepared using gastronomic techniques?",Gastronomic
+"Do you have a reputation for offering gastronomic creations?",Gastronomic
+"Are you considered a gastronomic hotspot in the area?",Gastronomic
+"Do you pride yourselves on your gastronomic expertise?",Gastronomic
+"Are your chefs trained in gastronomic cuisine?",Gastronomic
+"Do you source ingredients specifically for gastronomic purposes?",Gastronomic
+"Do you offer gastronomic tasting menus?",Gastronomic
+"Can I find gastronomic fusion dishes on your menu?",Gastronomic
+"Do you have a sommelier to pair wines with your gastronomic dishes?",Gastronomic
+"Are your gastronomic offerings seasonal or ever-changing?",Gastronomic
+"Do you use molecular gastronomy in your culinary creations?",Gastronomic
+"Is your restaurant part of any gastronomic associations or guilds?",Gastronomic
+"Can I expect gastronomic innovation in your menu?",Gastronomic
+"Do you have a gastronomic philosophy that guides your cuisine?",Gastronomic
+"Do you offer gastronomic experiences for special occasions?",Gastronomic
+"Are there any gastronomic events or collaborations happening soon?",Gastronomic
+"Can you recommend any gastronomic highlights from your menu?",Gastronomic
+
+"Any Michelin stars?",Etoile
+"Received any stars?",Etoile
+"Listed in Michelin Guide?",Etoile
+"Reviews mention Michelin stars?",Etoile
+"Chef known for starred cuisine?",Etoile
+"Awards for Michelin-starred dishes?",Etoile
+"Tasting menus with Michelin dishes?",Etoile
+"Collaborations with starred chefs?",Etoile
+"Top culinary destination with Michelin recognition?",Etoile
+"Dishes found in Michelin-starred restaurants?",Etoile
+"Praise and recognition?",Etoile
+"Located in area known for starred dining?",Etoile
+"Stars in marketing?",Etoile
+"Reputation for dining with stars?",Etoile
+"Featured in culinary publications with stars?",Etoile
+"Wine pairings for Michelin dishes?",Etoile
+"Stars in online reviews?",Etoile
+"Popular for starred dining?",Etoile
+"Partnerships for starred dining?",Etoile
+
+
+"Can I please get 2 duck breasts, 1 glass of red wine, and a bottle of water?",Add
+"I'd like a Mediterranean salad and 2 glasses of orange juice.",Add
+"Give me 3 beef carpaccios, 2 bottles of mineral water, and a glass of orange juice.",Add
+"Can I please get a grilled salmon and 2 glasses of red wine?",Add
+"I'll take 2 duck breasts and 1 glass of orange juice.",Add
+"Can I have 2 spinach raviolis and 1 glass of red wine?",Add
+"Give me 2 beef tartares and a bottle of mineral water.",Add
+"Can I please get 3 Mediterranean salads and 1 glass of orange juice?",Add
+"I'd like 2 grilled salmons and 1 glass of red wine.",Add
+"Could I get 2 duck breasts and 2 glasses of water?",Add
+"Can I have 3 beef carpaccios and 1 glass of red wine?",Add
+"Give me a spinach ravioli and a glass of water.",Add
+"Can I please get 2 beef tartares and 2 glasses of orange juice?",Add
+"I'll take a Mediterranean salad and 1 glass of red wine.",Add
+"Could I get 3 grilled salmons and 1 glass of water?",Add
+"Can I have 2 duck breasts, 1 glass of orange juice, and a bottle of water?",Add
+"Give me 2 beef carpaccios and 2 glasses of red wine.",Add
+"Can I please get a spinach ravioli and 1 glass of water?",Add
+"I'd like 2 beef tartares and 1 glass of orange juice.",Add
+"Could I get a Mediterranean salad and 2 glasses of red wine?",Add
+"Can I have 3 grilled salmons and 2 glasses of water?",Add
+"Give me 2 duck breasts and 1 glass of orange juice.",Add
+"Can I please get 2 beef carpaccios and a bottle of water?",Add
+"I'll take 2 spinach raviolis and 2 glasses of red wine.",Add
+"Could I get 3 beef tartares and 1 glass of orange juice?",Add
+"Can I have a Mediterranean salad and 1 glass of water?",Add
+"Give me 2 grilled salmons and 1 glass of orange juice.",Add
+"Can I please get 2 duck breasts and 2 glasses of red wine?",Add
+"I'd like 3 beef carpaccios and a bottle of water.",Add
+"Could I get a spinach ravioli and 1 glass of red wine?",Add
+"Can I have 2 beef tartares and 1 glass of water?",Add
+"Give me a Mediterranean salad and 2 glasses of orange juice.",Add
+"Can I please get 3 grilled salmons and 1 glass of red wine?",Add
+"I'll take 2 duck breasts and a bottle of water.",Add
+"Could I get 2 beef carpaccios and 2 glasses of water?",Add
+"Can I have a spinach ravioli and 2 glasses of red wine?",Add
+"Give me 3 beef tartares and 1 glass of orange juice.",Add
+"Can I please get a Mediterranean salad and 1 glass of water?",Add
+"I'd like 2 grilled salmons and 1 glass of orange juice.",Add
+
+
+"Please remove 1 glass of water from my order.",Del
+"I've decided against 2 duck breasts, please cancel them.",Del
+"No need for 1 glass of red wine anymore, take it out.",Del
+"Could you delete 1 bottle of water from our list?",Del
+"We've changed our minds, remove 1 grilled salmon, please.",Del
+"Cancel the order for 2 glasses of orange juice.",Del
+"I don't think we'll need 3 beef carpaccios after all.",Del
+"Can you remove 2 bottles of mineral water from my order?",Del
+"I want to exclude 2 beef tartares from our meal.",Del
+"No more 3 Mediterranean salads needed, remove them.",Del
+"Please take out 2 glasses of red wine from the order.",Del
+"Cancel the 2 duck breasts and 1 glass of orange juice.",Del
+"Drop 1 spinach ravioli and 2 glasses of water from my list.",Del
+"Let's not include 3 grilled salmons today.",Del
+"Actually, can you remove 1 Mediterranean salad from my order?",Del
+"I've changed my mind, cancel 2 beef carpaccios.",Del
+"Please, don't add 2 glasses of orange juice to our order.",Del
+"No need for 1 bottle of mineral water, take it out.",Del
+"I've decided against 1 spinach ravioli, please remove it.",Del
+"Cancel 1 glass of red wine from our selections.",Del
+"Go ahead and delete 2 duck breasts from what we're having.",Del
+"Can you make sure to cancel 3 beef tartares?",Del
+"Let's go ahead and remove 2 glasses of water.",Del
+"I need the 1 bottle of water taken out of our order.",Del
+"Decided against the 2 glasses of orange juice, please delete them.",Del
+"The 1 grilled salmon we added? Please cancel it.",Del
+"Change of plans, remove 2 Mediterranean salads please.",Del
+"The 3 beef carpaccios, can they be taken off the list?",Del
+"Actually, let's delete 1 glass of orange juice from the order.",Del
+"The 2 duck breasts are no longer necessary, please cancel them.",Del
+
+
+
