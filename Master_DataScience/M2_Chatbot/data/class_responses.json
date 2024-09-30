@@ -1,0 +1,88 @@
+{
+  "Location": [
+    "We're at 123 Main Street, downtown.",
+    "Find us downtown at 123 Main Street, near the main square.",
+    "123 Main Street is where you'll find our welcoming doors.",
+    "Look for us at 123 Main Street, in the heart of the city."
+  ],
+  "Opening_Hours": [
+    "Open Mon-Fri 9 am-10 pm, Sat-Sun 10 am-11 pm.",
+    "Weekdays 9 am-10 pm, weekends until 11 pm.",
+    "Join us any day, we're here from morning till late evening.",
+    "Our kitchen serves up delights within these hours: 9 am-10/11 pm."
+  ],
+  "Menu": [
+    "Check out our menu with local and international dishes. *Link to the menu* ",
+    "We have vegetarian, meat, and dessert options available. *Link to the menu* ",
+    "From comfort food to exotic tastes, our menu has it all. *Link to the menu* ",
+    "Our kitchen is proud to serve a variety of dishes to please any palate. *Link to the menu* "
+  ],
+  "Payment": [
+    "We accept cash, credit cards, and mobile payments.",
+    "Pay with cash or credit, we're flexible.",
+    "All major payment methods are welcome here.",
+    "Choose your way to pay: cash, card, or digital."
+  ],
+  "Allergens": [
+    "Tell your server about any allergies—we're here to help.",
+    "Allergy info available upon request. Separate prep areas for allergen-free meals.",
+    "We cater to all dietary needs, including allergy-friendly options.",
+    "Ask us about allergens; we take your health seriously."
+  ],
+  "Delivery": [
+    "We deliver to your doorstep. Fast and reliable.",
+    "Our delivery is quick and ensures fresh meals.",
+    "Hot and tasty dishes delivered to you in no time.",
+    "From our kitchen to your home, we deliver."
+  ],
+  "Reservation": [
+    "Book a table in advance to skip the wait.",
+    "Reserve online for immediate seating upon arrival.",
+    "Avoid the queue by booking your table early.",
+    "A quick reservation secures your spot without delay."
+  ],
+  "Greetings": [
+    "Welcome! What can we do for you?",
+    "Hi! Ready to order or need suggestions?",
+    "Good to see you! Looking for something specific?",
+    "Hello there! Let us know how we can help you."
+  ],
+  "Alcool": [
+    "We have wines, beers, and cocktails available.",
+    "Our bar is stocked with a variety of drinks.",
+    "Fancy a drink? Check out our selection of beverages.",
+    "Our alcoholic drinks range from refreshing beers to elegant wines."
+  ],
+  "Halal": [
+    "We offer halal menu options.",
+    "Our menu includes dishes prepared as per halal standards.",
+    "Looking for halal food? We've got you covered.",
+    "Halal diners, we have a selection just for you."
+  ],
+  "Vegetarien": [
+    "Many vegetarian choices are available on our menu.",
+    "Our menu features a selection of vegetarian dishes.",
+    "Vegetarian? Enjoy our range of plant-based meals.",
+    "Our vegetarian options are both wholesome and delicious."
+  ],
+  "Gastronomic": [
+    "Try our gourmet dishes, crafted for fine dining.",
+    "Our menu features gastronomic cuisine.",
+    "For a refined taste, explore our gastronomic offerings.",
+    "Gourmet dining awaits in each of our gastronomic delights."
+  ],
+  "Etoile": [
+    "We're proud to be a Michelin-starred restaurant.",
+    "Enjoy Michelin-starred dining with us.",
+    "Experience our award-winning Michelin-starred meals.",
+    "Our Michelin star shines in every dish we serve."
+  ],
+  "Add": [
+    "Added to your order.",
+    "Item successfully added to your order."
+  ],
+  "Del": [
+    "Removed from your order.",
+    "Item successfully removed from your order."
+  ]
+}
