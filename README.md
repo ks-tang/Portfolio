@@ -16,6 +16,12 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Extraction, traitement et analyse de données, sélection de caractéristiques pertinentes, clustering
 ![image_clusters](Master_DataScience/M1_Clustering/images/clusters.png)
 
+### 🔹 [Chatbot](Master_DataScience/M2_Chatbot)
+**Description rapide du projet** : Création d'un chatbot de prise de commande pour un restaurant
+- 🛠 **Technologies** : Tensorflow, FastAPI, Flask, Docker
+- 📌 **Points clés** : Tokenisation des données avec l'algorithme BERT, Entraînement des données, Reconnaissance d'entités nommées (NER), Déploiement de l'application
+![image_clusters](Master_DataScience/M2_Chatbot/images/chatbot.png)
+
 En construction...
 
 ## 📫 Me contacter
