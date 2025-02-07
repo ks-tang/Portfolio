@@ -46,7 +46,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 ### 🔹 [Stage : Analyse comportementale pour la durabilité énergétique](Master_DataScience/M2_Stage_LIRIS)
 **Description rapide du projet** : Ce projet vise à identifier les facteurs comportementaux les plus énergivores pour l'optimisation de la consommation d'énergie des ménages.
-- 📌 **Points clés** : Internet of Things (IoT), Internet of Behaviors (IoB), Etat de l'art, Traitement de données, Clustering, Feature Selection, Encodage, Analyse statistique, Corrélation
+- 📌 **Points clés** : Internet of Things (IoT), Internet of Behaviors (IoB), Etat de l'art, Traitement de données, Clustering, Feature Selection, Encodage, Analyse statistique, Corrélation, Rédaction d'article de recherche scientifique
 
 <p align="center">
   <img src="Master_DataScience/M2_Stage_LIRIS/images/clusters.png" alt="Image Clusters">
