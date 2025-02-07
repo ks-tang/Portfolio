@@ -20,6 +20,14 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 
 
+### 🔹 [Prédiction d'anomalies](Master_DataScience/M2_MachineLearning_Deploiement)
+**Description rapide du projet** : Ce projet illustre le déploiement d'une application de machine learning en réalisant une prédiction d'image afin de détecter des anomalies dans un jeu de données.
+- 📌 **Points clés** : Prédiction d'anomalies, Déploiement, Docker, FastAPI, Streamlit, Evidently, Machine Learning
+
+![image_clusters](Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png)
+
+
+
 ### 🔹 [Chatbot](Master_DataScience/M2_Chatbot)
 **Description rapide du projet** : Création d'un chatbot de prise de commande pour un restaurant.
 - 📌 **Points clés** : Tensorflow, FastAPI, Flask, Docker, Tokenisation des données avec l'algorithme BERT, Entraînement des données, Reconnaissance d'entités nommées (NER), Déploiement de l'application
@@ -36,11 +44,6 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 
 
-### 🔹 [Prédiction d'anomalies](Master_DataScience/M2_MachineLearning_Deploiement)
-**Description rapide du projet** : Ce projet illustre le déploiement d'une application de machine learning en réalisant une prédiction d'image afin de détecter des anomalies dans un jeu de données.
-- 📌 **Points clés** : Prédiction d'anomalies, Déploiement, Docker, FastAPI, Streamlit, Evidently, Machine Learning
-
-![image_clusters](Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png)
 
 
 
