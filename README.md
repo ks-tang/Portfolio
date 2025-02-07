@@ -21,7 +21,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 
 ### 🔹 [Chatbot](Master_DataScience/M2_Chatbot)
-**Description rapide du projet** : Création d'un chatbot de prise de commande pour un restaurant
+**Description rapide du projet** : Création d'un chatbot de prise de commande pour un restaurant.
 - 📌 **Points clés** : Tensorflow, FastAPI, Flask, Docker, Tokenisation des données avec l'algorithme BERT, Entraînement des données, Reconnaissance d'entités nommées (NER), Déploiement de l'application
   
 ![image_clusters](Master_DataScience/M2_Chatbot/images/chatbot.png)
@@ -29,10 +29,18 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 
 ### 🔹 [Stage : Analyse comportementale pour la durabilité énergétique](Master_DataScience/M2_Stage_LIRIS)
-**Description rapide du projet** : Ce projet vise à identifier les facteurs comportementaux les plus énergivores pour l'optimisation de la consommation d'énergie des ménages
+**Description rapide du projet** : Ce projet vise à identifier les facteurs comportementaux les plus énergivores pour l'optimisation de la consommation d'énergie des ménages.
 - 📌 **Points clés** : Internet of Things (IoT), Internet of Behaviors (IoB), Etat de l'art, Traitement de données, Clustering, Feature Selection, Encodage, Analyse statistique, Corrélation
 
 ![image_clusters](Master_DataScience/M2_Stage_LIRIS/images/clusters.png)
+
+
+
+### 🔹 [Prédiction d'anomalies](Master_DataScience/M2_MachineLearning_Deploiement)
+**Description rapide du projet** : Ce projet illustre le déploiement d'une application de machine learning en réalisant une prédiction d'image afin de détecter des anomalies dans un jeu de données.
+- 📌 **Points clés** : Prédiction d'anomalies, Déploiement, Docker, FastAPI, Streamlit, Evidently, Machine Learning
+
+![image_clusters](Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png)
 
 
 
