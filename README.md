@@ -24,7 +24,9 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 **Description rapide du projet** : Ce projet illustre le déploiement d'une application de machine learning en réalisant une prédiction d'image afin de détecter des anomalies dans un jeu de données.
 - 📌 **Points clés** : Prédiction d'anomalies, Déploiement, Docker, FastAPI, Streamlit, Evidently, Machine Learning
 
-![image_clusters](Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png)
+<p align="center">
+  <img src="Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png" alt="Prédiction d'anomalies">
+</p>
 
 
 
