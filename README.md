@@ -11,7 +11,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Visualisation dynamique et interactive des tendances de la pandémie avec D3JS
 
 <p align="center">
-  <img src="Licence_informatique/DataViz_CovidSituation/images/covid_map.png" alt="Image Covid">
+  <img src="Licence_informatique/DataViz_CovidSituation/images/covid_map.png" alt="Image Covid" width="500">
 </p>
 
 ---
@@ -21,7 +21,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Extraction, traitement et analyse de données, sélection de caractéristiques pertinentes, Clustering K-Means
 
 <p align="center">
-  <img src="Master_DataScience/M1_Clustering/images/clusters.png" alt="Image Clusters">
+  <img src="Master_DataScience/M1_Clustering/images/clusters.png" alt="Image Clusters" width="500">
 </p>
 
 ---
@@ -31,7 +31,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Prédiction d'anomalies, Déploiement, Docker, FastAPI, Streamlit, Evidently, Machine Learning
 
 <p align="center">
-  <img src="Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png" alt="Image Prédiction d'anomalies">
+  <img src="Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png" alt="Image Prédiction d'anomalies" width="500">
 </p>
 
 ---
@@ -41,7 +41,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Tensorflow, FastAPI, Flask, Docker, Tokenisation des données avec l'algorithme BERT, Entraînement des données, Reconnaissance d'entités nommées (NER), Déploiement de l'application
   
 <p align="center">
-  <img src="Master_DataScience/M2_Chatbot/images/chatbot.png" alt="Image Chatbot">
+  <img src="Master_DataScience/M2_Chatbot/images/chatbot.png" alt="Image Chatbot" width="500">
 </p>
 
 ---
@@ -51,7 +51,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Internet of Things (IoT), Internet of Behaviors (IoB), Etat de l'art, Traitement de données, Clustering, Feature Selection, Encodage, Analyse statistique, Corrélation, Rédaction d'article de recherche scientifique
 
 <p align="center">
-  <img src="Master_DataScience/M2_Stage_LIRIS/images/clusters.png" alt="Image Clusters">
+  <img src="Master_DataScience/M2_Stage_LIRIS/images/clusters.png" alt="Image Clusters" width="500">
 </p>
 
 --- 
