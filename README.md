@@ -80,7 +80,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - **Lien vers le chatbot** : [Lien](https://chatbot-cv.onrender.com/) (attendre un peu si inactif)
 
 <p align="center">
-  <img src="Projets_Personnels/Chatbot_CV/images/image_projets" alt="Image Clusters" width="500">
+  <img src="Projets_Personnels/Chatbot_CV/images/image_projets.png" alt="Image Chatbot" width="500">
 </p>
 
 ---
