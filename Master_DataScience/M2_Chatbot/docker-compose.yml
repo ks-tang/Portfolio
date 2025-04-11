@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  api_serving:
+    build: ./serving
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./serving:/app
+      - ./data:/data
+      - ./models:/models
+      - ./scripts:/scripts
+
+  webapp:
+    build: ./webapp
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./webapp:/app
+      - ./webapp/templates:/app/templates
+      - ./data:/data
+    environment:
+      - FLASK_APP=api.py
+      - FLASK_RUN_HOST=0.0.0.0
+    depends_on:
+      - api_serving
+    command: flask run --host=0.0.0.0 --port=5000

@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: scroll;
+}
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #333; 
+    text-align: center;
+    margin-top: 50px; 
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    font-size: 2em; 
+    font-weight: bold; 
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* La carte */
+#map {
+    background-color: #ADD8E6;
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    display:flex;
+}
+/* Listes déroulantes */
+#choix_joueur {
+    margin: 20px;
+    text-align: center;
+}
+#choix_joueur label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+#choix_joueur select {
+    padding: 8px;
+    font-size: 14px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#ou {
+    text-align: center;
+}
+#choix_club {
+    margin: 20px;
+    text-align: center;
+}
+#choix_club label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+#choix_club select {
+    padding: 8px;
+    font-size: 14px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Tooltip de la carte */
+.hidden {
+    display: none;
+}
+div.tooltip {
+    color: #222;
+    background-color: #fff;
+    padding: 0.5em;
+    text-shadow: #f5f5f5 0 1px 0;
+    border-radius: 2px;
+    opacity: 0.9;
+    position: absolute;
+}
+/* Nom du joueur */
+#nom_joueur ,#nom_club {
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 10px; 
+    text-align: center;
+}
+/* Tableau des transferts du joueur */
+#table_transferts {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#table_transferts th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-weight: bold; 
+}
+#table_transferts td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+/* Graphique de l'évolution du prix des transferts */
+#graph_zone {
+    text-align: center; 
+    margin: 50px auto; 
+}
+#graph_zone h2, benefice_graph {
+    font-size: 1.5em;
+    color: navy;
+    text-align: center;
+}
+#graph_prix {
+    margin: 20px auto; 
+    border: 1px solid #ddd; 
+    width: 60%;
+    height: 400px;
+    overflow: hidden; 
+}
+.bar {
+    fill: navy; 
+}
+/* Graphique des transactions des clubs */
+#graph_club, #benefice_club {
+    text-align: center; 
+    margin: 50px auto; 
+}
+#graph_club h2, #benefice_club h2 {
+    font-size: 1.5em;
+    color: navy;
+    text-align: center;
+}
+#graph_transactions, #benefice_graph {
+    margin: 20px auto; 
+    border: 1px solid #ddd; 
+    width: 60%;
+    height: 400px;
+    overflow: hidden; 
+}
+/* Slider */
+#slider {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}

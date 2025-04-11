@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Projet Dataviz : Football transfers</h1>
+    <div id="choix_joueur">
+        <!-- Ici on choisi le joueur -->
+        <label for="joueurs">Choisir un joueur :</label>
+        <select id="joueurs"></select>
+    </div>
+    <div id="ou"><p>ou</p></div>
+    <div id="choix_club">
+        <!-- Ici on choisi le club -->
+        <label for="clubs">Choisir un club :</label>
+        <select id="clubs"></select>
+    </div>
+    <div id="slider"></div>
+    <svg id="map" >
+        <!-- Ici se trouve la map -->
+    </svg>
+    <div id="infos_joueur">
+        <!-- Ici se trouve les infos sur le joueur -->
+        <div id="nom_joueur"></div>
+        <table id="table_transferts">
+            <thead>
+              <tr>
+                <th>De l'équipe</th>
+                <th>Ville de départ</th>
+                <th>Pays de départ</th>
+                <th>Saison</th>
+                <th>Prix</th>
+                <th>À l'équipe</th>
+                <th>Ville d'arrivée</th>
+                <th>Pays d'arrivée</th>
+              </tr>
+            </thead>
+            <tbody>
+                <!-- Tableau à remplir -->
+            </tbody>
+        </table>
+        <div id="graph_zone">
+            <h2> Evolution du prix de ses transferts</h2>
+            <svg id="graph_prix">
+                <!-- Graphique de l'évolution du prix des transferts-->
+            </svg>
+        </div>
+    </div>
+    <div id="infos_club">
+        <div id="nom_club"></div>
+        <div id="graph_club">
+            <h2>Montants des transactions du club par saison</h2>
+            <svg id="graph_transactions">
+                <!-- Graphique des transactions -->
+            </svg>
+        </div>
+        <div id="benefice_club">
+            <h2>Montants des bénéfices du club par saison</h2>
+            <svg id="benefice_graph">
+                <!-- Graphique des bénéfices -->
+            </svg>
+        </div>
+    </div>
+    <script>
+        /****************
+        * Les variables *
+        *****************/
+
+        // Création du SVG
+        var svg = d3.select("#map");
+
+        // Projection pour la carte du monde
+        var projection = d3.geoMercator()
+            .center([-20, 53]) // Coordonnées centrales (longitude, latitude)
+            .scale(1100);
+            
+        var path = d3.geoPath().projection(projection);
+
+        // Variable qui stocke les stades et leur localisation
+        var stadiumLocations = [];
+        // Variable qui stocke les transferts d'un joueur sélectionné
+        var playerTransfers = [];
+        // Création d'un tableau pour stocker les informations sur les transferts
+        var transferData = [];
+        // Création d'un tableau pour stocker les informations sur les clubs
+        var clubData = [];
+        //Création d'un tableau pour stocker les informations sur les bénéfices des clubs
+        var profitLossClubsData = [];
+        // Variable qui stocke la liste des saisons
+        var uniqueSeasons = [];
+
+        // Joueur sélectionné à afficher sur la carte par défaut
+        var selectedPlayer = "Kevin De Bruyne";
+        // Club sélectionné par défaut
+        var selectedClub = "Barcelona";
+        // Saison sélectionnée par défaut
+        var selectedSeason = "07/08";
+
+        // Slider
+        var slider;
+        // Creation du Tooltip
+        var tooltip = d3
+            .select("body")
+            .append("div")
+            .attr("class", "hidden tooltip");
+      
+        /************************** 
+        * Chargement des fichiers *
+        ***************************/
+        Promise.all([
+            d3.csv('Football_Stadiums2.csv'),
+            d3.csv('transfer_data.csv'),
+            d3.csv('worldcities.csv')
+        ]).then(function([stadiums, transfers, cities]) {
+
+            // Liste des saisons
+            uniqueSeasons = getUniqueColumnValues('SEASON', transfers);
+            
+            // Correspondance entre les stades et leur localisation
+            associate_stadium_cities(stadiums, cities);
+
+            /*******************************
+            * Liste déroulante des joueurs *
+            ********************************/
+
+            // Liste des joueurs
+            var players = Array.from(new Set(transfers.map(transfer => transfer.PLAYER)));
+            d3.select("#joueurs")
+                .selectAll("option")
+                .data(players)
+                .enter()
+                .append("option")
+                .text(function (d) { return d; })
+                .property("selected", function (d) {
+                    // Juste pour mettre Kevin De Bruyne par défaut
+                    return d === "Kevin De Bruyne";
+                });
+
+            // Liste des clubs
+            var clubsFrom = Array.from(new Set(transfers.map(transfer => transfer.FROM)));
+            var clubsTo = Array.from(new Set(transfers.map(transfer => transfer.TO)));
+            var allClubs = [...clubsFrom, ...clubsTo];
+            var clubs = Array.from(new Set(allClubs));
+            d3.select("#clubs")
+                .selectAll("option")
+                .data(clubs)
+                .enter()
+                .append("option")
+                .text(function (d) { return d; })
+                .property("selected", function (d) {
+                    // Juste pour mettre par défaut
+                    return d === "Barcelona";
+                });
+            
+            /***************************************************
+            * Evenements lorsqu'on sélectionne un autre joueur *
+            ****************************************************/
+
+            d3.select("#joueurs").on("change", function () {
+                activatePlayerView();
+
+                // Récupération du joueur sélectionné
+                selectedPlayer = d3.select(this).property("value");
+
+                // Mise à jour des données sur le joueur
+                transferData = [];
+                update_player_transfer(transfers, selectedPlayer);
+                console.log(transferData);
+
+                // Mise à jour de la carte
+                draw_lines(transferData);
+
+                // Mise à jour de la table d'informations du joueur
+                updatePlayerInfoTable(transferData, selectedPlayer);
+
+                drawGraph(transferData);
+
+            });
+
+            /*************************************************
+            * Evenements lorsqu'on sélectionne un autre club *
+            **************************************************/
+
+            d3.select("#clubs").on("change", function() {
+                activateClubView();
+
+                // Récupération du club sélectionné
+                selectedClub = d3.select(this).property("value");
+
+                updateClubTitle(selectedClub);
+
+                // Mise à jour des données sur le club
+                clubData = [];
+                update_clubData(clubData, transfers, selectedClub);
+                console.log(clubData);
+
+                draw_clubGraph(clubData);
+                var profitLossData = calculate_profitLoss(clubData);
+                draw_profitLossGraph(profitLossData);
+
+                // Premier affichage des transferts
+                draw_circles(transfers, clubData, selectedClub, selectedSeason);
+
+                /*********
+                * Slider *
+                **********/
+                d3.select("#slider").selectAll("*").remove();
+                slider = d3
+                    .sliderHorizontal()
+                    .min(0)
+                    .max(uniqueSeasons.length - 1)
+                    .step(1)
+                    .width(250)
+                    .displayValue(false)
+                    .tickFormat(function (d) {
+                        return uniqueSeasons[d];
+                    })
+                    .on('onchange', (val) => {
+                        selectedSeason = uniqueSeasons[val];
+                        draw_circles(transfers, clubData, selectedClub, selectedSeason);
+                    });
+
+                d3.select('#slider')
+                    .append('svg')
+                    .attr('height', 100)
+                    .append('g')
+                    .attr('transform', 'translate(30,30)')
+                    .call(slider);
+            })
+
+            /**********************************
+            * Evenements au premier affichage *
+            ***********************************/
+            activatePlayerView();
+
+            // Première mise à jour des données sur le joueur sélectionné
+            update_player_transfer(transfers, selectedPlayer);
+
+            // Premier affichage de la carte
+            draw_map(stadiumLocations, transferData);
+
+            // Premier affichage du tableau du joueur
+            updatePlayerInfoTable(transferData, selectedPlayer);
+
+            // Premier affichage du graphe
+            drawGraph(transferData);
+        });
+
+        /****************
+        * Les fonctions *
+        *****************/
+
+        /**
+         * Fonction d'affichage de la carte
+         * @param stadiumLocations
+         * @param transferData
+         */
+        function draw_map(stadiumLocations, transferData) {
+            // Chargement des données géographiques
+            d3.json("countries.geojson").then(function (geojson) {
+
+                // Affichage de la carte du monde
+                svg.selectAll("path")
+                    .data(geojson.features)
+                    .enter()
+                    .append("path")
+                    .attr("d", path)
+                    .style("fill", "#fff");
+
+                // Affichage des stades
+                svg.selectAll("circle")
+                    .data(stadiumLocations)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", function (d) {
+                        return projection([parseFloat(d.Longitude), parseFloat(d.Latitude)])[0];
+                    })
+                    .attr("cy", function (d) {
+                        return projection([parseFloat(d.Longitude), parseFloat(d.Latitude)])[1];
+                    })
+                    .attr("r", 1) 
+                    .style("fill", "navy");
+
+                draw_lines(transferData);
+            })
+        }
+
+        /**
+         * Fonction qui affiche les lignes des transferts sur la carte
+         * @param transferData
+         */
+        function draw_lines(transferData) {
+            cleanMap();
+
+            var line = d3.line()
+                .x(function (d) { return projection(d)[0]; }) // Projection de la longitude
+                .y(function (d) { return projection(d)[1]; }); // Projection de la latitude
+
+            svg.selectAll("line")
+                .data(transferData)
+                .enter()
+                .append("path")
+                .attr("class", "line")
+                .attr("d", function (d) {
+                    var coordinates = [d.fromCoords, d.toCoords];
+                    return line(coordinates);
+                })
+                .style("stroke", "red") 
+                .style("stroke-width", 2)
+
+                // Gestion du tooltip
+                .on("mousemove", function (e, d) {
+                    // Position de la souris
+                    var mousePosition = [e.x, e.y];
+                    // Affichage du tooltip
+                    tooltip
+                        .classed("hidden", false)
+                        .attr(
+                        "style",
+                        "left:" +
+                            (mousePosition[0] + 15) +
+                            "px; top:" +
+                            (mousePosition[1] - 35) +
+                            "px"
+                        )
+                        .html("De " + d.fromTeam + " à " + d.toTeam);
+                })
+                .on("mouseout", function () {
+                    // On cache le tooltip
+                    tooltip.classed("hidden", true);
+                });
+        }
+
+        /**
+         * Fonction de mise a jour des transferts du joueur sélectionné
+         * @param transfers : la liste des transferts
+         * @param selectedPlayer : le joueur sélectionné
+        */
+        function update_player_transfer(transfers, selectedPlayer) {
+            // Récuperation d'un joueur et ses transferts
+            playerTransfers = transfers.filter(function(transfer) {
+                return transfer.PLAYER == selectedPlayer;
+            });
+
+            // Pour chaque transfert on cherche les coordonnées des deux clubs dans le tableau de stades
+            playerTransfers.forEach(function (transfer) {
+                var fromStadium = stadiumLocations.find(function (stadium) {
+                    return stadium.Team === transfer.FROM;
+                });
+                var toStadium = stadiumLocations.find(function (stadium) {
+                    return stadium.Team === transfer.TO;
+                });
+
+                // On vérifie si les deux stades ont été trouvés
+                if (fromStadium && toStadium) {
+                    transferData.push({
+                        fromTeam: transfer.FROM,
+                        fromCity: fromStadium.City,
+                        fromCountry: fromStadium.Country,
+                        fromCoords: [fromStadium.Longitude, fromStadium.Latitude],
+                        toTeam: transfer.TO,
+                        toCity: toStadium.City,
+                        toCountry: toStadium.Country,
+                        toCoords: [toStadium.Longitude, toStadium.Latitude],
+                        price: transfer.PRICE,
+                        season: transfer.SEASON,
+                    });
+                }
+            });
+            // on trie les transferts
+            transferData = sort_transfers(transferData);
+        }
+
+        /**
+         * Fonction de mise a jour du tableau des transferts
+         * @param transfers : la liste des transferts
+         * @param selectedPlayer : le joueur sélectionné
+        */
+        function updatePlayerInfoTable(transferData, selectedPlayer) {
+            var playerName = d3.select("#nom_joueur");
+            var tableBody = d3.select("#table_transferts").select("tbody");
+
+            // Change le nom du joueur à l'affichage
+            playerName.text("Nom du joueur : " + selectedPlayer);
+
+            // Vide la tableau
+            tableBody.html("");
+
+            // Remplit la table avec les données de transfert
+            transferData.forEach(function (transfer) {
+                var row = tableBody.append("tr");
+                row.append("td").text(transfer.fromTeam);
+                row.append("td").text(transfer.fromCity);
+                row.append("td").text(transfer.fromCountry);
+                row.append("td").text(transfer.season);
+                row.append("td").text(transfer.price);
+                row.append("td").text(transfer.toTeam);
+                row.append("td").text(transfer.toCity);
+                row.append("td").text(transfer.toCountry);
+            });
+        }
+
+        /**
+         * Fonction de tri 
+         * @param transferData : la liste des transferts du joueur sélectionné
+        */
+        function sort_transfers(transferData) {
+            transferData = sort_transfers_byTeam(transferData);
+            transferData = sort_transfers_bySeason(transferData);
+            return transferData;
+        }
+
+        /**
+         * Fonction de tri par saison 
+         * @param transferData : la liste des transferts du joueur sélectionné
+         * @return transferData : la liste triée
+        */
+        function sort_transfers_bySeason(transferData) {
+           transferData.sort((a, b) => {
+                let saisonA = parseInt(a.season.split('/')[0]);
+                let saisonB = parseInt(b.season.split('/')[0]);
+                return saisonA - saisonB;
+            });
+
+            return transferData;
+        }
+
+        /**
+         * Fonction de tri par team
+         * @param transferData : la liste des transferts du joueur sélectionné
+         * @return newList : la liste triée
+        */
+        function sort_transfers_byTeam(transferData) {
+            var newList = [];
+            transferData.forEach(function (transfer) {
+                if (newList.length === 0) {
+                    newList.push(transfer);
+                }
+                else if (transfer.fromTeam == newList[newList.length - 1].toTeam) {
+                    newList.push(transfer);
+                }
+                else if (transfer.toTeam == newList[0].fromTeam) {
+                    newList.unshift(transfer);
+                }
+                else newList.push(transfer);
+            });
+            return newList;
+        }
+
+        /**
+         * Fonction d'affichage du graphe 
+         * @param transferData
+         * */
+        function drawGraph(transferData) {
+            var graphContainer = d3.select("#graph_prix");
+            graphContainer.selectAll("*").remove();
+
+            const w = 500;
+            const h = 380;
+            const padding = 90;
+            const minPrice = d3.min(transferData, d => parseInt(d.price));
+            const maxPrice = d3.max(transferData, d => parseInt(d.price));
+            var priceScale = d3.scaleLinear()
+                                .domain([minPrice, maxPrice])
+                                .range([0, 200]);
+
+            const svg = graphContainer
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
+            
+            // Affichage des barres
+            svg.selectAll("rect")
+                .data(transferData)
+                .enter()
+                .append("rect")
+                .attr("x", (d, i) => i * 100 + padding)
+                .attr("y", (d) => h - padding - priceScale(parseInt(d.price)))
+                .attr("width", 90)
+                .attr("height", (d) => priceScale(parseInt(d.price)) +1 ) //+1 pour avoir au moins 1 trait
+                .attr("class", "bar");
+            
+            // Affichage du prix
+            svg.selectAll("price_text")
+                .data(transferData)
+                .enter()
+                .append("text")
+                .text((d) => d.price)
+                .attr("x", (d, i) => i * 100 + padding)
+                .attr("y", (d, i) => h - padding - priceScale(parseInt(d.price)) - 10);
+            
+            // Affichage de la saison
+            svg.selectAll("season_text")
+                .data(transferData)
+                .enter()
+                .append("text")
+                .text((d) => "Saison " + d.season)
+                .attr("x", (d, i) => i * 100 + padding)
+                .attr("y", (d, i) => h - padding + 30);
+        }
+
+        /**
+         * Fonction qui fait correspondre les stades et leur localisation
+         * @param stadiums base de données des stades
+         * @param cities base de données des villes
+         * */
+        function associate_stadium_cities(stadiums, cities) {
+            for (var i = 0; i < stadiums.length; i++) {
+                var stadium = stadiums[i];
+                var matchingCities = cities.filter(function (city) {
+                    return stadium.City === city.city;
+                });
+
+                if (matchingCities.length === 1) {
+                    var matchingCity = matchingCities[0];
+                    stadiumLocations.push({
+                        Stadium: stadium.Stadium,
+                        City: stadium.City,
+                        Team: stadium.HomeTeams,
+                        Country: stadium.Country,
+                        Latitude: matchingCity.lat,
+                        Longitude: matchingCity.lng,
+                    });
+                } else if (matchingCities.length > 1) {
+                    // Si plusieurs correspondances on recherche celle avec le même pays
+                    var matchingCityWithCountry = matchingCities.find(function (city) {
+                        return city.Country === stadium.Country;
+                    });
+
+                    if (matchingCityWithCountry) {
+                        // Si une correspondance avec le même pays est trouvée on stocke les informations
+                        stadiumLocations.push({
+                            Stadium: stadium.Stadium,
+                            City: stadium.City,
+                            Team: stadium.HomeTeams,
+                            Country: stadium.Country,
+                            Latitude: matchingCityWithCountry.lat,
+                            Longitude: matchingCityWithCountry.lng,
+                        });
+                    } else {
+                        // Si aucune correspondance avec le même pays on utilise la première correspondance
+                        var firstMatchingCity = matchingCities[0];
+                        stadiumLocations.push({
+                            Stadium: stadium.Stadium,
+                            City: stadium.City,
+                            Team: stadium.HomeTeams,
+                            Country: stadium.Country,
+                            Latitude: firstMatchingCity.lat,
+                            Longitude: firstMatchingCity.lng,
+                        });
+                    }
+                }
+            }
+        }
+
+        function updateClubTitle(selectedClub) {
+            var clubName = d3.select("#nom_club");
+
+            // Change le nom du joueur
+            clubName.text("Nom du club : " + selectedClub);
+        }
+
+        /**
+         * Fonction de mise a jour du tableau des transferts
+         * @param transfers : la liste des transferts
+         * @param selectedClub : le club sélectionné
+        */
+        function update_clubData(clubDataArray, transfers, selectedClub) {
+
+            var transfersFrom = transfers.filter(function(transfer) {
+                return transfer.FROM == selectedClub;
+            });
+
+            var transfersTo = transfers.filter(function(transfer) {
+                return transfer.TO == selectedClub;
+            });
+
+            var uniqueSeasons = Array.from(new Set([...transfersFrom, ...transfersTo].map(transfer => transfer.SEASON)));
+
+            uniqueSeasons.forEach(function(season) {
+                var totalFrom = transfersFrom
+                    .filter(transfer => transfer.SEASON == season)
+                    .reduce((sum, transfer) => sum + parseInt(transfer.PRICE), 0);
+
+                var totalTo = transfersTo
+                    .filter(transfer => transfer.SEASON == season)
+                    .reduce((sum, transfer) => sum + parseInt(transfer.PRICE), 0);
+
+                clubDataArray.push({
+                    Club: selectedClub,
+                    Season: season,
+                    totalVentes: totalFrom,
+                    totalAchats: totalTo,
+                });
+            });
+
+            // Utilisez la fonction de comparaison pour trier clubData
+            clubDataArray.sort(compareBySeason);
+        }
+
+        function compareBySeason(a, b) {
+            const seasonA = a.Season;
+            const seasonB = b.Season;
+
+            if (seasonA < seasonB) {
+                return -1;
+            } else if (seasonA > seasonB) {
+                return 1;
+            } else {
+                return 0; 
+            }
+        }
+
+        function draw_clubGraph(clubData) {
+            var graphContainer = d3.select("#graph_transactions");
+            graphContainer.selectAll("*").remove();
+
+            const w = 1000;
+            const h = 380;
+            const padding = 90;
+            const barSpacing = 20;
+
+            var transferScale = d3.scaleLinear()
+                .domain([0, d3.max(clubData, d => Math.max(d.totalVentes, d.totalAchats))])
+                .range([0, 200]);
+
+            const svg = graphContainer
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+            // Affichage des barres pour les ventes
+            svg.selectAll(".ventes")
+                .data(clubData)
+                .enter()
+                .append("rect")
+                .attr("x", (d, i) => i * (60 + barSpacing) + padding)
+                .attr("y", d => h - padding - transferScale(d.totalVentes))
+                .attr("width", 30)
+                .attr("height", d => transferScale(d.totalVentes))
+                .style("fill", "green")
+                .attr("class", "bar")
+                .append("title")
+                .text((d)=>d.totalVentes);
+
+            // Affichage des barres pour les achats
+            svg.selectAll(".achats")
+                .data(clubData)
+                .enter()
+                .append("rect")
+                .attr("x", (d, i) => i * (60 + barSpacing) + padding + 30 )
+                .attr("y", d => h - padding - transferScale(d.totalAchats))
+                .attr("width", 30)
+                .attr("height", d => transferScale(d.totalAchats))
+                .style("fill", "red")
+                .attr("class", "bar")
+                .append("title")
+                .text((d)=>d.totalAchats);
+
+            svg.selectAll(".seasonLabel")
+                .data(clubData)
+                .enter()
+                .append("text")
+                .text(d => d.Season)
+                .attr("x", (d, i) => i * (60 + barSpacing) + padding + 15 + (30 + barSpacing) / 2)
+                .attr("y", h - padding + 15)
+                .attr("text-anchor", "middle")
+                .attr("class", "seasonLabel");
+
+            // Crée une échelle pour les montants des transferts
+            var priceScale = d3.scaleLinear()
+                .domain([d3.max(clubData, d => Math.max(d.totalVentes, d.totalAchats)), 0])
+                .range([0, 200]);
+            var yAxis = d3.axisLeft()
+                .scale(priceScale);
+            svg.append("g")
+                .attr("class", "y-axis")
+                .attr("transform", "translate(" + padding + "," + padding + ")")
+                .call(yAxis);
+
+            // Ajouter la légende
+            var legend = svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", "translate(" + (padding) + "," + (padding - 50) +")");
+
+            legend.append("rect")
+                .attr("width", 10)
+                .attr("height", 10)
+                .attr("fill", "green");
+            legend.append("text")
+                .text("Ventes")
+                .attr("x", 15)
+                .attr("y", 10);
+
+            legend.append("rect")
+                .attr("width", 10)
+                .attr("height", 10)
+                .attr("fill", "red")
+                .attr("transform", "translate(0,20)");
+            legend.append("text")
+                .text("Achats")
+                .attr("x", 15)
+                .attr("y", 30);
+        }
+        
+        function draw_profitLossGraph(profitLossData) {
+            var graphContainer = d3.select("#benefice_graph");
+            graphContainer.selectAll("*").remove();
+
+            const w = 900;
+            const h = 400;
+            const padding = 90;
+            var barSpacing = 20;
+
+            const svg = graphContainer
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+            
+            var priceScale = d3.scaleLinear()
+                .domain([0, d3.max(profitLossData, d => d.ProfitLoss)])
+                .range([0, 100]);
+
+            svg.selectAll("rect")
+                .data(profitLossData)
+                .enter()
+                .append("rect")
+                .attr("x", (d, i) => i * (50) + padding)
+                .attr("y", d => (d.ProfitLoss < 0) ? h - padding - 100 : h - padding - 100 - priceScale(Math.abs(d.ProfitLoss)))
+                .attr("width", 30)
+                .attr("height", d => priceScale(Math.abs(d.ProfitLoss)))
+                .style("fill", d => (d.ProfitLoss >= 0) ? "green" : "red")
+                .attr("class", "bar")
+                .append("title")
+                .text((d)=>d.ProfitLoss);
+
+            svg.selectAll(".seasonLabel")
+                .data(clubData)
+                .enter()
+                .append("text")
+                .text(d => d.Season)
+                .attr("x", (d, i) => i * (50) + padding + 15)
+                .attr("y", padding )
+                .attr("text-anchor", "middle")
+
+            // Ajout d'une ligne horizontale
+            svg.append("line")
+                .attr("x1", padding)
+                .attr("y1", h - padding - 100)
+                .attr("x2", w - padding)
+                .attr("y2", h - padding - 100)
+                .attr("stroke", "black");
+        }
+
+        /**
+         * Fonction qui calcule le bénéfice/perte
+         * @param clubData données du club
+         */
+        function calculate_profitLoss(clubData) {
+            return clubData.map(d => {
+                return {
+                    Season: d.Season,
+                    ProfitLoss: d.totalVentes - d.totalAchats
+                };
+            });
+        }
+
+        function getUniqueColumnValues(columnName, data) {
+            // Utilise Set pour éliminer les doublons
+            var uniqueValues = new Set(data.map(item => item[columnName]));
+            // Exclure 'NA' et les chiffres seuls
+            var filteredValues = Array.from(uniqueValues)
+                .filter(value => value !== 'NA' && isNaN(Number(value)))
+                .sort(); // Tri par ordre croissant
+            return filteredValues;
+        }
+
+        function draw_circles(transfers, clubData, selectedClub, selectedSeason) {
+            cleanMap();
+            
+            // Transferts sortants du club sélectionné
+            var transfersFrom = transfers
+                .filter(transfer => transfer.FROM == selectedClub)
+                .filter(transfer => transfer.SEASON == selectedSeason);
+            // Transferts entrants du club sélectionné
+            var transfersTo = transfers
+                .filter(transfer => transfer.TO == selectedClub)
+                .filter(transfer => transfer.SEASON == selectedSeason);
+            // Localisation du club sélectionné
+            var selectedClubLocation = stadiumLocations.find(stadium => stadium.Team == selectedClub);
+
+            // Cercle du club sélectionné
+            svg.append("circle")
+                .attr("cx", projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[0])
+                .attr("cy", projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[1])
+                .attr("r", 10)  
+                .attr("fill", "black")
+                .attr("class", "circle")
+                .append("title")
+                .text(selectedClub);
+            svg.append("text")
+                .attr("x", projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[0] + 12)
+                .attr("y", projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[1])
+                .attr("dy", ".35em")
+                .style("font-size", "12px")
+                .text(selectedClub)
+                .attr("class", "clubName");
+
+            // Visualisation pour les transferts sortants
+            transfersFrom.forEach(transfer => {
+                var ToClubLocation = stadiumLocations.find(stadium => stadium.Team == transfer.TO);
+                if(ToClubLocation) {
+                    svg.append("circle")
+                        .attr("cx", projection([parseFloat(ToClubLocation.Longitude), parseFloat(ToClubLocation.Latitude)])[0])
+                        .attr("cy", projection([parseFloat(ToClubLocation.Longitude), parseFloat(ToClubLocation.Latitude)])[1])
+                        .attr("r", (transfer.PRICE / 1000000) + 2)
+                        .attr("stroke", "green")
+                        .attr("stroke-width", 2)
+                        .attr("fill", "none")
+                        .attr("class", "circle")
+                        .append("title")
+                        .text(ToClubLocation.Team);
+                    svg.append("line")
+                        .attr("x1", projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[0])
+                        .attr("y1", projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[1])
+                        .attr("x2", projection([parseFloat(ToClubLocation.Longitude), parseFloat(ToClubLocation.Latitude)])[0])
+                        .attr("y2", projection([parseFloat(ToClubLocation.Longitude), parseFloat(ToClubLocation.Latitude)])[1])
+                        .attr("stroke", "green")
+                        .attr("stroke-width", 2)
+                        .attr("class", "line")
+                        .append("title")
+                        .text(transfer.PLAYER + " : " + transfer.PRICE);
+                    svg.append("text")
+                        .attr("x", projection([parseFloat(ToClubLocation.Longitude), parseFloat(ToClubLocation.Latitude)])[0] + 12)
+                        .attr("y", projection([parseFloat(ToClubLocation.Longitude), parseFloat(ToClubLocation.Latitude)])[1])
+                        .attr("dy", ".35em")
+                        .style("font-size", "12px")
+                        .text(ToClubLocation.Team)
+                        .attr("class", 'clubName');
+                    svg.append("text")
+                        .attr("x", (projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[0] +
+                            projection([parseFloat(ToClubLocation.Longitude), parseFloat(ToClubLocation.Latitude)])[0]) / 2)
+                        .attr("y", (projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[1] +
+                            projection([parseFloat(ToClubLocation.Longitude), parseFloat(ToClubLocation.Latitude)])[1]) / 2)
+                        .attr("dy", ".35em")
+                        .style("font-size", "12px")
+                        .style("fill", "green")
+                        .text(`${transfer.PLAYER}: ${transfer.PRICE}`)
+                        .attr("class", 'transferName');
+                } else {
+                    console.error("Location not found for club: " + transfer.TO);
+                }
+                
+            });
+            
+            // Visualisation pour les transferts entrants
+            transfersTo.forEach(transfer => {
+                var FromClubLocation = stadiumLocations.find(stadium => stadium.Team == transfer.FROM);
+                if(FromClubLocation) {
+                    svg.append("circle")
+                        .attr("cx", projection([parseFloat(FromClubLocation.Longitude), parseFloat(FromClubLocation.Latitude)])[0])
+                        .attr("cy", projection([parseFloat(FromClubLocation.Longitude), parseFloat(FromClubLocation.Latitude)])[1])
+                        .attr("r", (transfer.PRICE / 1000000) + 2)
+                        .attr("stroke", "red")
+                        .attr("stroke-width", 2)
+                        .attr("fill", "none")
+                        .attr("class", "circle")
+                        .append("title")
+                        .text(FromClubLocation.Team);
+                    svg.append("line")
+                        .attr("x1", projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[0])
+                        .attr("y1", projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[1])
+                        .attr("x2", projection([parseFloat(FromClubLocation.Longitude), parseFloat(FromClubLocation.Latitude)])[0])
+                        .attr("y2", projection([parseFloat(FromClubLocation.Longitude), parseFloat(FromClubLocation.Latitude)])[1])
+                        .attr("stroke", "red")
+                        .attr("stroke-width", 2)
+                        .attr("class", "line")
+                        .append("title")
+                        .text(transfer.PLAYER + " : " + transfer.PRICE);
+                    svg.append("text")
+                        .attr("x", projection([parseFloat(FromClubLocation.Longitude), parseFloat(FromClubLocation.Latitude)])[0] + 12)
+                        .attr("y", projection([parseFloat(FromClubLocation.Longitude), parseFloat(FromClubLocation.Latitude)])[1])
+                        .attr("dy", ".35em")
+                        .style("font-size", "12px")
+                        .text(FromClubLocation.Team)
+                        .attr("class", 'clubName');
+                    svg.append("text")
+                        .attr("x", (projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[0] +
+                            projection([parseFloat(FromClubLocation.Longitude), parseFloat(FromClubLocation.Latitude)])[0]) / 2)
+                        .attr("y", (projection([parseFloat(selectedClubLocation.Longitude), parseFloat(selectedClubLocation.Latitude)])[1] +
+                            projection([parseFloat(FromClubLocation.Longitude), parseFloat(FromClubLocation.Latitude)])[1]) / 2)
+                        .attr("dy", ".35em")
+                        .style("font-size", "12px")
+                        .style("fill", "red")
+                        .text(`${transfer.PLAYER}: ${transfer.PRICE}`)
+                        .attr("class", 'transferName');;
+                    
+                } else {
+                    console.error("Location not found for club: " + transfer.FROM);
+                }
+            });
+        }
+
+        /**
+         * Fonction qui supprime les lignes et cercles de la carte 
+         */
+        function cleanMap() {
+            d3.select("#map").selectAll(".line").remove();
+            d3.select("#map").selectAll(".circle").remove();
+            d3.select("#map").selectAll(".clubName").remove();
+            d3.select("#map").selectAll(".transferName").remove();
+        }
+
+        /**
+         * Fonction qui active la vue Joueur
+         */
+        function activatePlayerView() {
+            d3.select("#infos_joueur").style("display", "block");
+            d3.select("#infos_club").style("display", "none");
+            d3.select("#slider").style("display", "none");
+        }
+
+        /**
+         * Fonction qui active la vue Club
+         */
+        function activateClubView() {
+            d3.select("#infos_joueur").style("display", "none");
+            d3.select("#infos_club").style("display", "block");
+            d3.select("#slider").style("display", "block");
+        }
+
+    </script>
+    <footer>
+        <p>Fait par Kévin TANG, Yann VINCENT et Siham KIARED</p>
+        <p>Etudiants M2 Data Science à l'Université Lyon 1</p>
+    </footer>
+  </body>
