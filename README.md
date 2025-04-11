@@ -56,8 +56,34 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 --- 
 
+### 🔹 [SalesReportingPipeline](Projets_Personnels/SalesReportingPipeline)
+**Description rapide du projet** : Ce projet met en place un pipeline de traitement des données de ventes d’un supermarché, depuis l’ingestion jusqu’à la visualisation.
+- 📌 **Points clés** : ETL automatisé en Python, nettoyage des données, stockage dans PostgreSQL, visualisation interactive avec Power BI, conteneurisation Docker
+- **Lien vers le projet** : [Lien](https://github.com/ks-tang/SalesReportingPipeline)
 
+<p align="center">
+  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_main.png" alt="Main" width="500">
+</p>
+<p align="center">
+  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_client.png" alt="Client" width="500">
+</p>
+<p align="center">
+  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_produits.png" alt="Produits" width="500">
+</p>
 
+---
+
+### 🔹 [Chatbot_CV](Projets_Personnels/Chatbot_CV)
+**Description rapide du projet** : Développement d’un chatbot intelligent capable de répondre aux questions d’un recruteur sur mon parcours, mes compétences et mes projets.
+- 📌 **Points clés** : NLP avec TF-IDF & similarité cosinus, FastAPI, interface web HTML/CSS, déploiement cloud via Render, CI/CD avec GitHub Actions
+- **Lien vers le projet** : [Lien](https://github.com/ks-tang/Chatbot_CV)
+- **Lien vers le chatbot** : [Lien](https://chatbot-cv.onrender.com/) (attendre un peu si inactif)
+
+<p align="center">
+  <img src="Projets_Personnels/Chatbot_CV/images/image_projets" alt="Image Clusters" width="500">
+</p>
+
+---
 
 
 ## 📫 Me contacter
