@@ -1,6 +1,6 @@
 # 👋 Bienvenue sur mon GitHub !
 
-Vous trouverez ici des projets réalisés durant mes études en **Licence informatique** et **Master Data Science**, ainsi que certains projets personnels, couvrant divers domaines tels que l'apprentissage automatique, l'analyse de données, la visualisation de données ou les jeux vidéos.
+Vous trouverez ici des projets réalisés durant mes études en **Licence informatique** et **Master Data Science**, ainsi que certains **projets personnels**, couvrant divers domaines tels que l'apprentissage automatique, l'analyse de données, la visualisation de données, le déploiements d'applications ou même les jeux vidéos.
 
 ## 🚀 Projets phares
 
