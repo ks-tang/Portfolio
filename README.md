@@ -86,28 +86,28 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - Power BI :
   - [Power BI Mastery: Zero to Hero Data Skills](https://www.udemy.com/course/power-bi-mastery-zero-to-hero-data-visualization-skills/)
  
-Amazon Web Services :
+- Amazon Web Services :
   - [Intro to Machine Learning in AWS for Beginners](https://www.udemy.com/course/intro-to-machine-learning-in-aws-for-beginners-new-2022/)
   - [Getting Started with Data Analytics on AWS](https://www.udemy.com/course/draft/3980204)
 
-Database Design & Development :
+- Database Design & Development :
   - [Basics of Database Design & Development](https://www.udemy.com/course/database-design-development/)
 
-Data Scientist :
+- Data Scientist :
   - [Master in Data Science to become a Data Scientist](https://www.udemy.com/course/a-complete-roadmap-to-become-a-successful-data-scientist/)
 
-Data Analyst :
+- Data Analyst :
   - [Se préparer au métier d’analyste de données par Microsoft et LinkedIn](https://www.linkedin.com/learning/paths/se-preparer-au-metier-d-analyste-de-donnees-par-microsoft-et-linkedin-19745848)
 
 - Business Analyst :
   - [Master Business Analysis to become a Business Analyst](https://www.udemy.com/course/master-in-business-analysis/)
 
-IA Générative : 
+- IA Générative : 
   - [Préparer votre carrière dans l'IA générative par Microsoft et LinkedIn](https://www.linkedin.com/learning/paths/preparer-votre-carriere-dans-l-ia-generative-par-microsoft-et-linkedin)
   - [Améliorez votre productivité grâce à l'IA générative avec Microsoft et LinkedIn](https://www.linkedin.com/learning/paths/ameliorez-votre-productivite-grace-a-l-ia-generative-avec-microsoft-et-linkedin)
 
 
-
+---
 
 ## 📫 Me contacter
 - 💼 [LinkedIn](https://www.linkedin.com/in/ks-tang/)
