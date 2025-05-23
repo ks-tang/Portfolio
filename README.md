@@ -6,7 +6,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 ## 🔎 Projets personnels 
 
-### 🔹 [SalesReportingPipeline](Projets_Personnels/SalesReportingPipeline)
+### 🔹 [SalesReportingPipeline](https://github.com/ks-tang/SalesReportingPipeline)
 **Description rapide du projet** : Ce projet met en place un pipeline de traitement des données de ventes d’un supermarché, depuis l’ingestion jusqu’à la visualisation.
 - 📌 **Points clés** : ETL automatisé en Python, nettoyage des données, stockage dans PostgreSQL, visualisation interactive avec Power BI, conteneurisation Docker
 - **Lien vers le projet** : [Lien](https://github.com/ks-tang/SalesReportingPipeline)
@@ -21,7 +21,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_produits.png" alt="Produits" width="200">
 </p>
 
-### 🔹 [Chatbot_CV](Projets_Personnels/Chatbot_CV)
+### 🔹 [Chatbot_CV](https://github.com/ks-tang/Chatbot_CV)
 **Description rapide du projet** : Développement d’un chatbot intelligent capable de répondre aux questions d’un recruteur sur mon parcours, mes compétences et mes projets.
 - 📌 **Points clés** : NLP avec TF-IDF & similarité cosinus, FastAPI, interface web HTML/CSS, déploiement cloud via Render, CI/CD avec GitHub Actions
 - **Lien vers le projet** : [Lien](https://github.com/ks-tang/Chatbot_CV)
