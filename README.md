@@ -114,7 +114,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 | Certification | Organisme | Aperçu | Fichier |
 | :--- | :---: | :---: | :---: |
-| **Google Data Analytics** | Google / Coursera | <img src="./Certifications/Badge_google-data-analytics-professional-certificate-v2.png" width="120" alt="Google Data Analytics"> | [🖼️ PNG](./Certifications/Badge_google-data-analytics-professional-certificate-v2.png) |
+| **Google Data Analytics** | Google / Coursera | <img src="./Certifications/Badge_google-data-analytics-professional-certificate-v2.png" width="120" alt="Google Data Analytics"> | [📄 PDF](./Certifications/GoogleDataAnalyticsProfessionalCertificatev2_Badge20250613-27-rewnwx.pdf) |
 | **Microsoft Analyste de données** | Microsoft / LinkedIn | <img src="./Certifications/MicrosoftLinkedIn_AnalysteDeDonnees.jpg" width="120" alt="Microsoft Analyste de données"> | [📄 PDF](./Certifications/MicrosoftLinkedIn_AnalysteDeDonnees.pdf) |
 | **Google Certified Professional Machine Learning Engineer** | Google / Udemy | <img src="./Certifications/Udemy_GoogleCertifiedProfessionalMachineLearningEngineer.jpg" width="120" alt="Google Certified Professional Machine Learning Engineer"> | [📄 PDF](./Certifications/Udemy_GoogleCertifiedProfessionalMachineLearningEngineer.pdf) |
 | **Power BI** | Udemy | <img src="./Certifications/Udemy_PowerBI.jpg" width="120" alt="Udemy Power BI"> | [📄 PDF](./Certifications/Udemy_PowerBI.pdf) | 
