@@ -6,19 +6,27 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 ## 🔎 Projets personnels 
 
+### 🔹 [CHATBOT.IA — Assistant IA Vocal, RAG & Agent Autonome](https://github.com/ks-tang/ChatbotIA)
+**Description rapide du projet** : Application web avec design inspiré de l'esthétique Nothing, combinant interaction vocale (STT/TTS), analyse de documents multi-formats (RAG) et automatisation d'actions via un agent autonome.
+- 📌 **Points clés** : RAG côté client (PDF, TXT, CSV, images), intégration d'APIs (Groq, OpenRouter), synthèse/reconnaissance vocale, automatisation d'actions (e-mails via Resend/Gmail, calendrier), interface Next.js/Tailwind CSS responsive.
+- **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/ChatbotIA)
+- **Lien vers l'application** : [CHATBOT.IA](https://chatbot-ia-kstang.vercel.app/)
+
+<p align="center">
+  <img src="Projets_Personnels/ChatbotIA/images/chatbotia_ia.png" alt="Chatbot IA Générale" width="300">
+  <img src="Projets_Personnels/ChatbotIA/images/chatbotia_rag.png" alt="Chatbot IA RAG" width="300">
+  <img src="Projets_Personnels/ChatbotIA/images/chatbotia_agent.png" alt="Chatbot IA Agent" width="300">
+</p>
+
 ### 🔹 [SalesReportingPipeline](https://github.com/ks-tang/SalesReportingPipeline)
 **Description rapide du projet** : Ce projet met en place un pipeline de traitement des données de ventes d’un supermarché, depuis l’ingestion jusqu’à la visualisation.
 - 📌 **Points clés** : ETL automatisé en Python, nettoyage des données, stockage dans PostgreSQL, visualisation interactive avec Power BI, conteneurisation Docker
 - **Lien vers le projet** : [Lien](https://github.com/ks-tang/SalesReportingPipeline)
 
 <p align="center">
-  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_main.png" alt="Main" width="200">
-</p>
-<p align="center">
-  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_client.png" alt="Client" width="200">
-</p>
-<p align="center">
-  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_produits.png" alt="Produits" width="200">
+  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_main.png" alt="Main" width="300">
+  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_client.png" alt="Client" width="300">
+  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_produits.png" alt="Produits" width="300">
 </p>
 
 ### 🔹 [Chatbot_CV](https://github.com/ks-tang/Chatbot_CV)
@@ -28,7 +36,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - **Lien vers le chatbot** : [Lien](https://chatbot-cv.onrender.com/) (attendre un peu si inactif)
 
 <p align="center">
-  <img src="Projets_Personnels/Chatbot_CV/images/image_projets.png" alt="Image Chatbot" width="200">
+  <img src="Projets_Personnels/Chatbot_CV/images/image_projets.png" alt="Image Chatbot" width="300">
 </p>
 
 ---
@@ -40,7 +48,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Internet of Things (IoT), Internet of Behaviors (IoB), Etat de l'art, Traitement de données, Clustering, Feature Selection, Encodage, Analyse statistique, Corrélation, Rédaction d'article de recherche scientifique
 
 <p align="center">
-  <img src="Master_DataScience/M2_Stage_LIRIS/images/clusters.png" alt="Image Clusters" width="200">
+  <img src="Master_DataScience/M2_Stage_LIRIS/images/clusters.png" alt="Image Clusters" width="300">
 </p>
 
 --- 
@@ -52,7 +60,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Visualisation dynamique et interactive des tendances de la pandémie avec D3JS
 
 <p align="center">
-  <img src="Licence_informatique/DataViz_CovidSituation/images/covid_map.png" alt="Image Covid" width="200">
+  <img src="Licence_informatique/DataViz_CovidSituation/images/covid_map.png" alt="Image Covid" width="300">
 </p>
 
 ### 🔹 [Machine Learning pour la création de devis](https://github.com/ks-tang/Portfolio/tree/master/Master_DataScience/M1_Clustering)
@@ -60,7 +68,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Extraction, traitement et analyse de données, sélection de caractéristiques pertinentes, Clustering K-Means
 
 <p align="center">
-  <img src="Master_DataScience/M1_Clustering/images/clusters.png" alt="Image Clusters" width="200">
+  <img src="Master_DataScience/M1_Clustering/images/clusters.png" alt="Image Clusters" width="300">
 </p>
 
 ### 🔹 [Prédiction d'anomalies](Master_DataScience/M2_MachineLearning_Deploiement)
@@ -68,7 +76,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Prédiction d'anomalies, Déploiement, Docker, FastAPI, Streamlit, Evidently, Machine Learning
 
 <p align="center">
-  <img src="Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png" alt="Image Prédiction d'anomalies" width="200">
+  <img src="Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png" alt="Image Prédiction d'anomalies" width="300">
 </p>
 
 ### 🔹 [Chatbot](Master_DataScience/M2_Chatbot)
@@ -76,7 +84,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Tensorflow, FastAPI, Flask, Docker, Tokenisation des données avec l'algorithme BERT, Entraînement des données, Reconnaissance d'entités nommées (NER), Déploiement de l'application
   
 <p align="center">
-  <img src="Master_DataScience/M2_Chatbot/images/chatbot.png" alt="Image Chatbot" width="200">
+  <img src="Master_DataScience/M2_Chatbot/images/chatbot.png" alt="Image Chatbot" width="300">
 </p>
 
 ---
