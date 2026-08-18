@@ -13,9 +13,9 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - **Lien vers l'application** : [CHATBOT.IA](https://chatbot-ia-kstang.vercel.app/)
 
 <p align="center">
-  <img src="Projets_Personnels/ChatbotIA/images/chatbotia_ia.png" alt="Chatbot IA Générale" width="300">
-  <img src="Projets_Personnels/ChatbotIA/images/chatbotia_rag.png" alt="Chatbot IA RAG" width="300">
-  <img src="Projets_Personnels/ChatbotIA/images/chatbotia_agent.png" alt="Chatbot IA Agent" width="300">
+  <img src="Projets_Personnels/ChatbotIA/images/chatbotia_ia.png" alt="Chatbot IA Générale" width="200">
+  <img src="Projets_Personnels/ChatbotIA/images/chatbotia_rag.png" alt="Chatbot IA RAG" width="200">
+  <img src="Projets_Personnels/ChatbotIA/images/chatbotia_agent.png" alt="Chatbot IA Agent" width="200">
 </p>
 
 ### 🔹 [SalesReportingPipeline](https://github.com/ks-tang/SalesReportingPipeline)
@@ -24,9 +24,9 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - **Lien vers le projet** : [Lien](https://github.com/ks-tang/SalesReportingPipeline)
 
 <p align="center">
-  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_main.png" alt="Main" width="300">
-  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_client.png" alt="Client" width="300">
-  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_produits.png" alt="Produits" width="300">
+  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_main.png" alt="Main" width="200">
+  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_client.png" alt="Client" width="200">
+  <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_produits.png" alt="Produits" width="200">
 </p>
 
 ### 🔹 [Chatbot_CV](https://github.com/ks-tang/Chatbot_CV)
