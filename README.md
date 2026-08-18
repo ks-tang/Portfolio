@@ -6,6 +6,16 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 ## 🔎 Projets personnels 
 
+### 🔹 [🇨🇦 Québec & Montréal — Guide interactif & Cartographie](https://github.com/ks-tang/Quebec-Project)
+**Description rapide du projet** : Application web interactive conçue pour explorer Québec et Montréal, analyser le marché immobilier local par quartier et planifier ses démarches d'installation/voyage (PVT, logistique, transports).
+- 📌 **Points clés** : Cartographie interactive (Leaflet.js, GeoJSON), dashboard statistique des loyers (Chart.js), intégration des réseaux de transport (RTC/STM), checklist interactive avec sauvegarde locale (`localStorage`).
+- **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/Quebec-Project)
+- **Lien vers l'application** : [Québec & Montréal Project](https://ks-tang.github.io/Quebec-Project/)
+
+<p align="center">
+  <img src="Projets_Personnels/Quebec_Project/images/preview.png" alt="Québec & Montréal Project Preview" width="500">
+</p>
+
 ### 🔹 [CHATBOT.IA — Assistant IA Vocal, RAG & Agent Autonome](https://github.com/ks-tang/ChatbotIA)
 **Description rapide du projet** : Application web avec design inspiré de l'esthétique Nothing, combinant interaction vocale (STT/TTS), analyse de documents multi-formats (RAG) et automatisation d'actions via un agent autonome.
 - 📌 **Points clés** : RAG côté client (PDF, TXT, CSV, images), intégration d'APIs (Groq, OpenRouter), synthèse/reconnaissance vocale, automatisation d'actions (e-mails via Resend/Gmail, calendrier), interface Next.js/Tailwind CSS responsive.
@@ -36,7 +46,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - **Lien vers le chatbot** : [Lien](https://chatbot-cv.onrender.com/) (attendre un peu si inactif)
 
 <p align="center">
-  <img src="Projets_Personnels/Chatbot_CV/images/image_projets.png" alt="Image Chatbot" width="300">
+  <img src="Projets_Personnels/Chatbot_CV/images/image_projets.png" alt="Image Chatbot" width="500">
 </p>
 
 ---
@@ -48,7 +58,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Internet of Things (IoT), Internet of Behaviors (IoB), Etat de l'art, Traitement de données, Clustering, Feature Selection, Encodage, Analyse statistique, Corrélation, Rédaction d'article de recherche scientifique
 
 <p align="center">
-  <img src="Master_DataScience/M2_Stage_LIRIS/images/clusters.png" alt="Image Clusters" width="300">
+  <img src="Master_DataScience/M2_Stage_LIRIS/images/clusters.png" alt="Image Clusters" width="500">
 </p>
 
 --- 
@@ -60,7 +70,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Visualisation dynamique et interactive des tendances de la pandémie avec D3JS
 
 <p align="center">
-  <img src="Licence_informatique/DataViz_CovidSituation/images/covid_map.png" alt="Image Covid" width="300">
+  <img src="Licence_informatique/DataViz_CovidSituation/images/covid_map.png" alt="Image Covid" width="500">
 </p>
 
 ### 🔹 [Machine Learning pour la création de devis](https://github.com/ks-tang/Portfolio/tree/master/Master_DataScience/M1_Clustering)
@@ -68,7 +78,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Extraction, traitement et analyse de données, sélection de caractéristiques pertinentes, Clustering K-Means
 
 <p align="center">
-  <img src="Master_DataScience/M1_Clustering/images/clusters.png" alt="Image Clusters" width="300">
+  <img src="Master_DataScience/M1_Clustering/images/clusters.png" alt="Image Clusters" width="500">
 </p>
 
 ### 🔹 [Prédiction d'anomalies](Master_DataScience/M2_MachineLearning_Deploiement)
@@ -76,7 +86,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Prédiction d'anomalies, Déploiement, Docker, FastAPI, Streamlit, Evidently, Machine Learning
 
 <p align="center">
-  <img src="Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png" alt="Image Prédiction d'anomalies" width="300">
+  <img src="Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png" alt="Image Prédiction d'anomalies" width="500">
 </p>
 
 ### 🔹 [Chatbot](Master_DataScience/M2_Chatbot)
@@ -84,7 +94,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - 📌 **Points clés** : Tensorflow, FastAPI, Flask, Docker, Tokenisation des données avec l'algorithme BERT, Entraînement des données, Reconnaissance d'entités nommées (NER), Déploiement de l'application
   
 <p align="center">
-  <img src="Master_DataScience/M2_Chatbot/images/chatbot.png" alt="Image Chatbot" width="300">
+  <img src="Master_DataScience/M2_Chatbot/images/chatbot.png" alt="Image Chatbot" width="500">
 </p>
 
 ---
