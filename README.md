@@ -34,9 +34,9 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 - **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/RoadDamageDetection)
 
 <p align="center">
-  <img src="Projets_Personnels/RoadDamageDetection/images/example1.png" alt="Exemple Nid de poule" width="200">
-  <img src="Projets_Personnels/RoadDamageDetection/images/example2.png" alt="Exemple Fissures" width="200">
-  <img src="Projets_Personnels/RoadDamageDetection/images/example_batch.png" alt="Prédiction en lot" width="200">
+  <img src="Projets_Personnels/RoadDamageDetection/images/example1.jpg" alt="Exemple Nid de poule" width="200">
+  <img src="Projets_Personnels/RoadDamageDetection/images/example2.jpg" alt="Exemple Fissures" width="200">
+  <img src="Projets_Personnels/RoadDamageDetection/images/example_batch.jpg" alt="Prédiction en lot" width="200">
 </p>
 
 ### 🔹 [SalesReportingPipeline](https://github.com/ks-tang/SalesReportingPipeline)
