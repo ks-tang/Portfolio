@@ -28,6 +28,17 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Projets_Personnels/ChatbotIA/images/chatbotia_agent.png" alt="Chatbot IA Agent" width="200">
 </p>
 
+### 🔹 [Road Damage Detection avec YOLOv8](https://github.com/ks-tang/RoadDamageDetection)
+**Description rapide du projet** : Détection et classification automatique des dégradations routières (fissures, nids-de-poule) à partir d'images grâce au modèle de vision par ordinateur YOLOv8.
+- 📌 **Points clés** : Fine-tuning YOLOv8, préparation de dataset au format YOLO (images/labels), pipeline d'entraînement et d'inférence, détection d'objets en temps réel, évaluation des performances (mAP, matrices de confusion).
+- **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/RoadDamageDetection)
+
+<p align="center">
+  <img src="Projets_Personnels/RoadDamageDetection/images/example1.png" alt="Exemple Nid de poule" width="200">
+  <img src="Projets_Personnels/RoadDamageDetection/images/example2.png" alt="Exemple Fissures" width="200">
+  <img src="Projets_Personnels/RoadDamageDetection/images/example_batch.png" alt="Prédiction en lot" width="200">
+</p>
+
 ### 🔹 [SalesReportingPipeline](https://github.com/ks-tang/SalesReportingPipeline)
 **Description rapide du projet** : Ce projet met en place un pipeline de traitement des données de ventes d’un supermarché, depuis l’ingestion jusqu’à la visualisation.
 - 📌 **Points clés** : ETL automatisé en Python, nettoyage des données, stockage dans PostgreSQL, visualisation interactive avec Power BI, conteneurisation Docker
