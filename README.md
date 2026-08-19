@@ -162,6 +162,6 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 ## 📫 Me contacter
 - 💼 [LinkedIn](https://www.linkedin.com/in/ks-tang/)
-- 📧 Email : pro.tang.kevin@gmail.com
+- 📧 [Email](mailto:pro.tang.kevin@gmail.com)
 
 Merci de visiter mon profil ! ⭐ N'hésitez pas à explorer mes projets !
