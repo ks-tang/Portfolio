@@ -16,7 +16,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Projets_Personnels/Quebec_Project/images/preview.png" alt="Québec & Montréal Project Preview" width="500">
 </p>
 
-### 🔹 [CHATBOT.IA — Assistant IA Vocal, RAG & Agent Autonome](https://github.com/ks-tang/ChatbotIA)
+### 🔹 [🤖 CHATBOT.IA — Assistant IA Vocal, RAG & Agent Autonome](https://github.com/ks-tang/ChatbotIA)
 **Description rapide du projet** : Application web avec design inspiré de l'esthétique Nothing, combinant interaction vocale (STT/TTS), analyse de documents multi-formats (RAG) et automatisation d'actions via un agent autonome.
 - 📌 **Points clés** : RAG côté client (PDF, TXT, CSV, images), intégration d'APIs (Groq, OpenRouter), synthèse/reconnaissance vocale, automatisation d'actions (e-mails via Resend/Gmail, calendrier), interface Next.js/Tailwind CSS responsive.
 - **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/ChatbotIA)
@@ -28,7 +28,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Projets_Personnels/ChatbotIA/images/chatbotia_agent.png" alt="Chatbot IA Agent" width="200">
 </p>
 
-### 🔹 [Road Damage Detection avec YOLOv8](https://github.com/ks-tang/RoadDamageDetection)
+### 🔹 [🚗 Road Damage Detection avec YOLOv8](https://github.com/ks-tang/RoadDamageDetection)
 **Description rapide du projet** : Détection et classification automatique des dégradations routières (fissures, nids-de-poule) à partir d'images grâce au modèle de vision par ordinateur YOLOv8.
 - 📌 **Points clés** : Fine-tuning YOLOv8, préparation de dataset au format YOLO (images/labels), pipeline d'entraînement et d'inférence, détection d'objets en temps réel, évaluation des performances (mAP, matrices de confusion).
 - **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/RoadDamageDetection)
@@ -39,7 +39,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Projets_Personnels/RoadDamageDetection/images/example_batch.jpg" alt="Prédiction en lot" width="200">
 </p>
 
-### 🔹 [SalesReportingPipeline](https://github.com/ks-tang/SalesReportingPipeline)
+### 🔹 [📊 SalesReportingPipeline](https://github.com/ks-tang/SalesReportingPipeline)
 **Description rapide du projet** : Ce projet met en place un pipeline de traitement des données de ventes d’un supermarché, depuis l’ingestion jusqu’à la visualisation.
 - 📌 **Points clés** : ETL automatisé en Python, nettoyage des données, stockage dans PostgreSQL, visualisation interactive avec Power BI, conteneurisation Docker
 - **Lien vers le projet** : [Lien](https://github.com/ks-tang/SalesReportingPipeline)
@@ -50,7 +50,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Projets_Personnels/SalesReportingPipeline/images/powerbi_produits.png" alt="Produits" width="200">
 </p>
 
-### 🔹 [Chatbot_CV](https://github.com/ks-tang/Chatbot_CV)
+### 🔹 [🤖 Chatbot_CV](https://github.com/ks-tang/Chatbot_CV)
 **Description rapide du projet** : Développement d’un chatbot intelligent capable de répondre aux questions d’un recruteur sur mon parcours, mes compétences et mes projets.
 - 📌 **Points clés** : NLP avec TF-IDF & similarité cosinus, FastAPI, interface web HTML/CSS, déploiement cloud via Render, CI/CD avec GitHub Actions
 - **Lien vers le projet** : [Lien](https://github.com/ks-tang/Chatbot_CV)
@@ -58,6 +58,16 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 <p align="center">
   <img src="Projets_Personnels/Chatbot_CV/images/image_projets.png" alt="Image Chatbot" width="500">
+</p>
+
+### 🔹 [🏦 Loan Approval Predictor](https://github.com/ks-tang/LoanPrediction)
+**Description rapide du projet** : Application de Machine Learning web avec API FastAPI permettant de prédire en temps réel l'approbation d'une demande de prêt bancaire à partir du profil de l'emprunteur.
+- 📌 **Points clés** : Prétraitement et comparaison de modèles ML (Random Forest, SVC, Logistic Regression), API backend FastAPI, conteneurisation Docker, tests unitaires, CI/CD avec GitHub Actions et déploiement cloud sur Render.
+- **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/LoanPrediction)
+- **Lien vers l'application** : [Loan Approval Predictor](https://loanprediction-wpcl.onrender.com/) *(si actif)*
+
+<p align="center">
+  <img src="Projets_Personnels/LoanPrediction/images/loanapproved.png" alt="Loan Prediction Interface" width="500">
 </p>
 
 ---
@@ -76,7 +86,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 ## 🎓 Projets académiques
 
-### 🔹 [Covid Situation](https://github.com/ks-tang/Portfolio/tree/master/Licence_informatique/DataViz_CovidSituation)
+### 🔹 [🦠 Covid Situation](https://github.com/ks-tang/Portfolio/tree/master/Licence_informatique/DataViz_CovidSituation)
 **Description rapide du projet** : Ce projet consiste à exploiter des données sur la situation épidémique du COVID-19 pour créer des visualisations graphiques claires et compréhensibles.
 - 📌 **Points clés** : Visualisation dynamique et interactive des tendances de la pandémie avec D3JS
 
@@ -84,7 +94,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Licence_informatique/DataViz_CovidSituation/images/covid_map.png" alt="Image Covid" width="500">
 </p>
 
-### 🔹 [Machine Learning pour la création de devis](https://github.com/ks-tang/Portfolio/tree/master/Master_DataScience/M1_Clustering)
+### 🔹 [🧾 Machine Learning pour la création de devis](https://github.com/ks-tang/Portfolio/tree/master/Master_DataScience/M1_Clustering)
 **Description rapide du projet** : Ce projet porte sur l'identification de segments de clientèle cible afin d’optimiser les stratégies marketing d'une entreprise.
 - 📌 **Points clés** : Extraction, traitement et analyse de données, sélection de caractéristiques pertinentes, Clustering K-Means
 
@@ -92,7 +102,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Master_DataScience/M1_Clustering/images/clusters.png" alt="Image Clusters" width="500">
 </p>
 
-### 🔹 [Prédiction d'anomalies](Master_DataScience/M2_MachineLearning_Deploiement)
+### 🔹 [🔍 Prédiction d'anomalies](Master_DataScience/M2_MachineLearning_Deploiement)
 **Description rapide du projet** : Ce projet illustre le déploiement d'une application de machine learning en réalisant une prédiction d'image afin de détecter des anomalies dans un jeu de données.
 - 📌 **Points clés** : Prédiction d'anomalies, Déploiement, Docker, FastAPI, Streamlit, Evidently, Machine Learning
 
@@ -100,7 +110,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Master_DataScience/M2_MachineLearning_Deploiement/images/predict.png" alt="Image Prédiction d'anomalies" width="500">
 </p>
 
-### 🔹 [Chatbot](Master_DataScience/M2_Chatbot)
+### 🔹 [🤖 Chatbot](Master_DataScience/M2_Chatbot)
 **Description rapide du projet** : Création d'un chatbot de prise de commande pour un restaurant.
 - 📌 **Points clés** : Tensorflow, FastAPI, Flask, Docker, Tokenisation des données avec l'algorithme BERT, Entraînement des données, Reconnaissance d'entités nommées (NER), Déploiement de l'application
   
