@@ -7,7 +7,7 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 ## 🔎 Projets personnels 
 
 ### 🔹 [🇨🇦 Québec & Montréal — Guide interactif & Cartographie](https://github.com/ks-tang/Quebec-Project)
-**Description rapide du projet** : Application web interactive conçue pour explorer Québec et Montréal, analyser le marché immobilier local par quartier et planifier ses démarches d'installation/voyage (PVT, logistique, transports).
+**Description rapide du projet** : Application web interactive conçue pour explorer Québec et Montréal, analyser le marché immobilier local par quartier et planifier mes démarches d'installation/voyage (PVT, logistique, transports).
 - 📌 **Points clés** : Cartographie interactive (Leaflet.js, GeoJSON), dashboard statistique des loyers (Chart.js), intégration des réseaux de transport (RTC/STM), checklist interactive avec sauvegarde locale (`localStorage`).
 - **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/Quebec-Project)
 - **Lien vers l'application** : [Québec & Montréal Project](https://ks-tang.github.io/Quebec-Project/)
