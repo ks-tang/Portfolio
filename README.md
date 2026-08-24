@@ -33,10 +33,10 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   - Interface optimisée pour une expérience fluide sur smartphone, tablette et ordinateur.
  
 <p align="center">
-  <img src="Projets_Personnels/FamilyTree/images/accueil.jpg" alt="Accueil" width="200">
-  <img src="Projets_Personnels/FamilyTree/images/arbre.jpg" alt="Arbre Généalogique" width="200">
-  <img src="Projets_Personnels/FamilyTree/images/album.png" alt="Album" width="200">
-  <img src="Projets_Personnels/FamilyTree/images/agenda.png" alt="Agenda" width="200">
+  <img src="Projets_Personnels/FamilyTree/images/accueil.jpg" alt="Accueil" height="220">
+  <img src="Projets_Personnels/FamilyTree/images/arbre.jpg" alt="Arbre Généalogique" height="220">
+  <img src="Projets_Personnels/FamilyTree/images/album.png" alt="Album" height="220">
+  <img src="Projets_Personnels/FamilyTree/images/agenda.png" alt="Agenda" height="220">
 </p>
 
 ### 🔹 [🇨🇦 Québec & Montréal — Guide interactif & Cartographie](https://github.com/ks-tang/Quebec-Project)
