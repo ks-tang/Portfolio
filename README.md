@@ -6,16 +6,6 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
 
 ## 🔎 Projets personnels 
 
-### 🔹 [🇨🇦 Québec & Montréal — Guide interactif & Cartographie](https://github.com/ks-tang/Quebec-Project)
-**Description rapide du projet** : Application web interactive conçue pour explorer Québec et Montréal, analyser le marché immobilier local par quartier et planifier mes démarches d'installation/voyage (PVT, logistique, transports).
-- 📌 **Points clés** : Cartographie interactive (Leaflet.js, GeoJSON), dashboard statistique des loyers (Chart.js), intégration des réseaux de transport (RTC/STM), checklist interactive avec sauvegarde locale (`localStorage`).
-- **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/Quebec-Project)
-- **Lien vers l'application** : [Québec & Montréal Project](https://ks-tang.github.io/Quebec-Project/)
-
-<p align="center">
-  <img src="Projets_Personnels/Quebec_Project/images/preview.png" alt="Québec & Montréal Project Preview" width="500">
-</p>
-
 ### 🔹 [🤖 CHATBOT.IA — Assistant IA Vocal, RAG & Agent Autonome](https://github.com/ks-tang/ChatbotIA)
 **Description rapide du projet** : Application web avec design inspiré de l'esthétique Nothing, combinant interaction vocale (STT/TTS), analyse de documents multi-formats (RAG) et automatisation d'actions via un agent autonome.
 - 📌 **Points clés** : RAG côté client (PDF, TXT, CSV, images), intégration d'APIs (Groq, OpenRouter), synthèse/reconnaissance vocale, automatisation d'actions (e-mails via Resend/Gmail, calendrier), interface Next.js/Tailwind CSS responsive.
@@ -26,6 +16,37 @@ Vous trouverez ici des projets réalisés durant mes études en **Licence inform
   <img src="Projets_Personnels/ChatbotIA/images/chatbotia_ia.png" alt="Chatbot IA Générale" width="200">
   <img src="Projets_Personnels/ChatbotIA/images/chatbotia_rag.png" alt="Chatbot IA RAG" width="200">
   <img src="Projets_Personnels/ChatbotIA/images/chatbotia_agent.png" alt="Chatbot IA Agent" width="200">
+</p>
+
+### 🔹 [👨‍👩‍👧‍👦 FamilyTree](https://github.com/ks-tang/family-tree) (Projet privé)
+**Description rapide du projet** : Application web collaborative et sécurisée dédiée à l'histoire et à la vie de famille, structurée autour d'un arbre généalogique interactif et d'outils de partage communautaires.
+- **Fonctionnalités** :
+  - Arbre généalogique dynamique et collaborative en temps réel (ajout de membres, fiches détaillées avec dates, biographies et photos de profil).
+  - Album photo partagé : Galerie chronologique avec système de marquage/identification des membres sur les clichés.
+  - Calendrier commun : Suivi automatisé des anniversaires et centralisation des événements familiaux à venir.
+  - Répertoire familial : Fiches individuelles regroupant les informations personnelles et l'ensemble des photos où la personne est identifiée.
+  - Commutation instantanée en 1 clic de l'interface en trois langues (français, anglais, khmer).
+  - La page d'accueil contient un carrousel des dernières photos ajoutées dans l'album et un rappel du prochain évènement à venir.
+- 📌 **Points clés** :
+  - Accès restreint & confidentialité : Espace strictement privé accessible uniquement sur invitation mail envoyée par l'administrateur. Protection intégrale des données personnelles et des médias.
+  - Stack technique : Authentification et base de données hébergées sur Supabase ; déploiement et hébergement continu via Vercel.
+  - Interface optimisée pour une expérience fluide sur smartphone, tablette et ordinateur.
+ 
+<p align="center">
+  <img src="Projets_Personnels/FamilyTree/images/accueil.jpg" alt="Accueil" width="200">
+  <img src="Projets_Personnels/FamilyTree/images/arbre.jpg" alt="Arbre Généalogique" width="200">
+  <img src="Projets_Personnels/FamilyTree/images/album.png" alt="Album" width="200">
+  <img src="Projets_Personnels/FamilyTree/images/agenda.png" alt="Agenda" width="200">
+</p>
+
+### 🔹 [🇨🇦 Québec & Montréal — Guide interactif & Cartographie](https://github.com/ks-tang/Quebec-Project)
+**Description rapide du projet** : Application web interactive conçue pour explorer Québec et Montréal, analyser le marché immobilier local par quartier et planifier mes démarches d'installation/voyage (PVT, logistique, transports).
+- 📌 **Points clés** : Cartographie interactive (Leaflet.js, GeoJSON), dashboard statistique des loyers (Chart.js), intégration des réseaux de transport (RTC/STM), checklist interactive avec sauvegarde locale (`localStorage`).
+- **Lien vers le projet** : [Repository GitHub](https://github.com/ks-tang/Quebec-Project)
+- **Lien vers l'application** : [Québec & Montréal Project](https://ks-tang.github.io/Quebec-Project/)
+
+<p align="center">
+  <img src="Projets_Personnels/Quebec_Project/images/preview.png" alt="Québec & Montréal Project Preview" width="500">
 </p>
 
 ### 🔹 [🚗 Road Damage Detection avec YOLOv8](https://github.com/ks-tang/RoadDamageDetection)
